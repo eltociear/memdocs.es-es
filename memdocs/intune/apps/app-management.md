@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252312"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012670"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>¿Qué es la administración de aplicaciones de Microsoft Intune?
 
@@ -101,6 +101,7 @@ La parte superior del menú de navegación de la carga de trabajo de la aplicaci
     - **Directivas de configuración de aplicaciones**: seleccione esta opción para proporcionar valores de configuración que podrían ser necesarios cuando el usuario ejecuta una aplicación. Para obtener más información, consulte [Directivas de configuración de aplicaciones](app-configuration-policies-use-ios.md), [Directivas de configuración de aplicaciones para iOS](app-configuration-policies-use-ios.md) y [Directivas de configuración de aplicaciones para Android](app-configuration-policies-overview.md).
     - **Perfiles de aprovisionamiento de aplicaciones de iOS**: las aplicaciones iOS incluyen un perfil y un código de aprovisionamiento que está firmado por un certificado. Cuando el certificado expira, ya no se puede ejecutar la aplicación. Intune proporciona las herramientas para asignar proactivamente una nueva directiva de perfil de aprovisionamiento a dispositivos que tengan aplicaciones cuya expiración esté próxima. Para obtener más información, consulte [Perfiles de aprovisionamiento de aplicaciones de iOS](app-provisioning-profile-ios.md).
     - **Directivas complementarias del modo S**: Seleccione esta opción para autorizar a más aplicaciones a ejecutarse en los dispositivos administrados en modo S. Para obtener más información, consulte [Directivas complementarias del modo S](apps-win32-s-mode.md).
+    - **Policies for Office apps** (Directivas para aplicaciones de Office): seleccione esta opción para crear directivas de administración de aplicaciones móviles para las aplicaciones móviles de Office que se conectan a servicios de Microsoft 365. También puede proteger el acceso a los buzones locales de Exchange mediante la creación de directivas de protección de aplicaciones de Intune para Outlook para iOS/iPadOS y Android habilitadas con autenticación moderna híbrida. Debe cumplir los requisitos para usar directivas para las aplicaciones de Office. Para más información sobre los requisitos, consulte [Requisitos para usar el servicio de directiva de la nube de Office](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). Las directivas de protección de aplicaciones no son compatibles con otras aplicaciones que se conectan a los servicios de Exchange o SharePoint locales. Puede encontrar información relacionada en [Introducción al servicio de directivas de la nube de Office para las aplicaciones de Microsoft 365 para empresas](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
     - **Conjuntos de directivas**: Seleccione esta opción para crear una colección asignable de aplicaciones, directivas y otros objetos de administración que se han creado. Para obtener más información, consulte [Conjuntos de directivas](../fundamentals/policy-sets.md).
 - **Otros**:   
     - **Borrado selectivo de aplicaciones**: seleccione esta opción para quitar solo los datos corporativos de un dispositivo de un usuario seleccionado. Para obtener más información, consulte [Borrado selectivo de aplicaciones](apps-selective-wipe.md).
@@ -109,10 +110,10 @@ La parte superior del menú de navegación de la carga de trabajo de la aplicaci
 - **Ayuda y soporte técnico**: solucione problemas, solicite soporte técnico o vea el estado de Intune. Para obtener más información, consulte [Solución de problemas](../fundamentals/help-desk-operators.md).
 
 ### <a name="try-the-interactive-guide"></a>Pruebe la guía interactiva
-La guía interactiva [Administración y protección de aplicaciones para dispositivos móviles y de escritorio con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) le guía a través del Centro de administración de Microsoft Endpoint Manager para mostrarle cómo administrar dispositivos inscritos en Intune, aplicar el cumplimiento mediante directivas y proteger los datos de la organización.</br></br>
+La guía interactiva [Administración y protección de aplicaciones para dispositivos móviles y de escritorio con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) le guía a través del Centro de administración de Microsoft Endpoint Manager para mostrarle cómo administrar dispositivos inscritos en Intune, aplicar el cumplimiento mediante directivas y proteger los datos de la organización.</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>Información adicional

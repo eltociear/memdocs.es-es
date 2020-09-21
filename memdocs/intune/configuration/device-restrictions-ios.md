@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423890"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574820"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos iOS e iPadOS para permitir o restringir características mediante Intune
 
@@ -173,9 +173,9 @@ Estos valores se agregan a un perfil de configuración del dispositivo en Intune
   > [!NOTE]
   > En el caso de los dispositivos inscritos por el usuario, los usuarios pueden establecer un PIN de más de 6 dígitos. Pero en los dispositivos no se exigen más de 6 dígitos. Por ejemplo, un administrador establece la longitud mínima en `8`. En los dispositivos inscritos por el usuario, solo se exige a los usuarios establecer un PIN de 6 dígitos. Intune no exige un PIN de más de 6 dígitos en los dispositivos inscritos por el usuario.
 
-- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de errores de inicio de sesión antes de que se borre el dispositivo, entre 4 y 11.
+- **Número de errores de inicio de sesión antes de borrar el dispositivo**: escriba el número de errores de inicio de sesión antes de que se borre el dispositivo, entre 2 y 11. No se recomienda establecer este valor en `2` o `3`. Es muy habitual escribir la contraseña incorrecta. El borrado del dispositivo después de dos o tres intentos incorrectos de contraseña sucede con frecuencia. Se recomienda establecer este valor en al menos `4`. 
   
-  iOS/iPadOS cuenta con seguridad integrada que puede afectar a esta configuración. Por ejemplo, iOS/iPadOS puede retrasar la activación de la directiva en función del número de errores de inicio de sesión. También puede considerar la especificación repetida del mismo código de acceso como un intento. La [guía de seguridad de iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) de Apple (abre el sitio web de Apple) es un buen recurso y proporciona detalles más concretos sobre los códigos de acceso.
+  iOS/iPadOS cuenta con seguridad integrada que puede afectar a esta configuración. Por ejemplo, iOS/iPadOS puede retrasar la activación de la directiva en función del número de errores de inicio de sesión. También puede considerar la especificación repetida del mismo código de acceso como un intento. La [guía de seguridad de iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) de Apple (abre el sitio web de Apple) es un buen recurso y proporciona detalles más concretos sobre los códigos de acceso. 
   
 - **Máximo de minutos tras bloqueo de pantalla antes de solicitar la contraseña**<sup>1</sup>: Introduzca cuánto tiempo pueden permanecer inactivos los dispositivos antes de que los usuarios deban volver a escribir la contraseña. Si escribe un tiempo mayor al que está establecido actualmente en el dispositivo, este pasará por alto el tiempo que escribió.
 

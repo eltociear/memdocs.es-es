@@ -2,11 +2,11 @@
 title: Recopilación de datos en Intune
 titleSuffix: Microsoft Intune
 description: Obtenga más información sobre cómo se recopilan los datos personales en Intune.
-keywords: ''
+keywords: privacy, personal data
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,36 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bcd7ff1ae51314bc57be2bed39c7fe8ca7114d82
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079576"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076114"
 ---
 # <a name="data-collection-in-intune"></a>Recopilación de datos en Intune
 
-Cuando los usuarios inscriben sus dispositivos corporativos o personales con Intune, Intune recopila y comparte algunos datos personales. Intune recopila datos personales de los siguientes orígenes:
+Cuando los usuarios inscriben sus dispositivos personales o corporativos mediante Intune, Intune recopila, procesa y comparte algunos datos personales para permitir las operaciones empresariales, realizar negocios con el cliente y respaldar el servicio. Intune recopila datos personales de los siguientes orígenes:
 
-- Uso del administrador de Intune en Azure Portal.
-- Dispositivos de usuario final (cuando se inscriben para la administración de Intune y durante el uso).
-- Cuentas de clientes en servicios de terceros (por las instrucciones del administrador).
+- El uso de Intune de los administradores en el Centro de administración de Microsoft Endpoint Manager.
+- Dispositivos de usuario final (cuando los dispositivos se inscriben para la administración de Intune y durante el uso).
+- Cuentas de clientes en servicios de terceros (según las instrucciones del administrador).
 - Información de diagnóstico, rendimiento y uso.
 
-Desde estos orígenes, Intune recopila información que se divide en las siguientes tres categorías: [identificados](#identified-data), [formato anónimo](#pseudonymized-data) y [agregados](#aggregated-data).
+A partir de estos orígenes, Intune recopila información que pertenece a las dos categorías siguientes: [requerida](#required-data) y [opcional](#optional-data). En cada una de las categorías, los datos se dividen además en datos del cliente, datos personales, datos de diagnóstico y datos generados por el servicio. 
 
 > [!NOTE]
 > No vendemos ningún dato recogido por nuestro servicio a terceros por ningún motivo.
 
-## <a name="identified-data"></a>Datos identificados
+## <a name="required-data"></a>Datos necesarios
 
-La mayoría de los datos personales recopilados por Intune son datos identificados. Estos datos están asociados a un usuario, dispositivo o aplicación, y son esenciales para la naturaleza de la administración. Los datos identificados se usan para administrar las aplicaciones y el dispositivo de un usuario, y para aprovisionar el servicio de Intune.
+Los datos de la categoría requerida constan de datos que son necesarios para que el servicio funcione según lo previsto por el cliente. La mayoría de los datos recopilados por Intune son datos requeridos. Estos datos están asociados a un usuario, dispositivo o aplicación, y son esenciales para la naturaleza de la administración. Los datos recopilados contienen datos personales y datos no personales. Los datos personales incluyen datos identificables, que pueden identificar directamente al usuario final, o datos seudonimizados con un identificador único generado por el sistema, que se usan para prestar a los usuarios el servicio empresarial y proporcionar datos de soporte técnico y datos de cuentas. Los datos no personales incluyen metadatos del sistema generados por el servicio e información de la organización o del inquilino. Intune también recopila datos de control de acceso para administrar el acceso a las funciones y roles administrativos mediante características como [Control de acceso basado en rol](../fundamentals/role-based-access-control.md).
 
-Los datos identificados recopilados por Intune pueden incluir lo siguiente, aunque no se trata de una lista exhaustiva: 
+Los datos requeridos recopilados por Intune pueden incluir, entre otros: 
 
 - Información de usuario
-  - Nombre del propietario o usuario para mostrar (el nombre registrado en Azure del usuario identificado por theAzureUserID)
+  - Nombre del propietario o nombre para mostrar del usuario (el nombre registrado en Azure del usuario identificado por AzureUserID)
   - Nombre principal de usuario o dirección de correo electrónico
+  - Número de teléfono
   - Identificador de usuario de terceros (como AppleID)
 - Información de inventario de hardware
   - Nombre del dispositivo
@@ -58,7 +59,6 @@ Los datos identificados recopilados por Intune pueden incluir lo siguiente, aunq
   - Dirección IP
   - MacAddress Wi-Fi
   - ICCID
-  - Número de teléfono
 - Información de registro de auditoría, incluidos los datos sobre las siguientes actividades
   - Administración
   - Crear
@@ -69,7 +69,7 @@ Los datos identificados recopilados por Intune pueden incluir lo siguiente, aunq
 - Información de soporte técnico
   - Información de contacto (nombre, número de teléfono, dirección de correo electrónico)
   - Conversaciones de correo electrónico miembros del equipo de experiencia del usuario, de producto o de soporte técnico de Microsoft
-- Información de control de acceso (Intune usa estos datos para administrar el acceso a las funciones y roles administrativos a través de características como [Control de acceso basado en roles](../fundamentals/role-based-access-control.md)).
+- Información de control de acceso 
   - Autenticadores estáticos (contraseña del cliente)
   - Claves de privacidad para los certificados 
 - Información de cuenta y de administrador
@@ -88,23 +88,8 @@ Los datos identificados recopilados por Intune pueden incluir lo siguiente, aunq
   - tamaño
   - ubicación de instalación
   - Los datos de inventario de aplicaciones solo se recopilan cuando están marcados por el administrador como un dispositivo corporativo o si la característica de aplicación compatible está activada.  
-- Identificadores de inquilino de terceros del cliente, como el identificador de Apple. 
-
-## <a name="pseudonymized-data"></a>Datos de formato anónimo
-
-Los datos de formato anónimo están asociados a un identificador único, con frecuencia un número generado por el sistema que por sí mismo no permite identificar a una persona, pero que se usa para proporcionar los servicios de empresa a los usuarios. 
-
-Los datos de formato anónimo recopilados por Intune pueden incluir lo siguiente, aunque no se trata de una lista exhaustiva: 
-
-- Datos de uso, rendimiento y diagnóstico ligados a un usuario o dispositivo
-  - Número de veces que se usa una característica
-  - Comandos proporcionados a la característica
-  - Tiempo de respuesta de un servicio
-  - Tasas de éxito de instalaciones y otros procesos
-  - Errores de aplicación del portal de empresa de Intune
-  - Identificadores de usuarios y dispositivos
-  - Identificadores con fines de referencia, correlación o administración 
-- Datos del dispositivo no asociados a un dispositivo o usuario (si estos datos están ligados a un dispositivo o usuario, Intune los trata como datos identificados)
+- Identificadores de inquilino de terceros del cliente (como el identificador de Apple)
+- Datos del dispositivo
   - Identificador de dispositivo de Intune.
   - Id. de dispositivo de Azure Active Directory
   - Id. de administración de dispositivos de Intune
@@ -121,13 +106,6 @@ Los datos de formato anónimo recopilados por Intune pueden incluir lo siguiente
   - Id. de administración de dispositivos de Intune
   - Id. de dispositivo de Azure Active Directory
   - Claves de cifrado
-
-## <a name="aggregated-data"></a>Datos agregados
-
-Los datos agregados se usan para aprovisionar y mejorar el servicio de Intune. 
-
-Los datos agregados recopilados por Intune pueden incluir lo siguiente, aunque no se trata de una lista exhaustiva: 
-
 - Datos de uso del administrador de todos los inquilinos de Intune (por ejemplo, los controles de administración seleccionados al interactuar con la consola de administración)
 - Información de la cuenta de inquilino (estos datos están disponibles en la hoja de Intune)
   - Número de dispositivos o usuario inscritos
@@ -137,6 +115,18 @@ Los datos agregados recopilados por Intune pueden incluir lo siguiente, aunque n
   - notApplicableDeviceCount: Número de dispositivos para los que la aplicación no está disponible.
   - notInstalledDeviceCount: Número de dispositivos para los que la aplicación está disponible, pero no está instalada.
   - pendingInstallDeviceCount: Número de dispositivos para los que la aplicación está disponible y la instalación está pendiente.
+
+## <a name="optional-data"></a>Datos opcionales
+
+Los datos de la categoría opcional no son esenciales para la experiencia del producto o servicio. Los clientes pueden controlar la recopilación de datos opcionales. Intune permite a los clientes incluirse o excluirse de la recopilación de datos opcionales. Entre los ejemplos de datos opcionales están los datos que Intune recopila para el diagnóstico y la telemetría. Aunque creemos que existen razones de peso para que los usuarios compartan estos datos opcionales, puesto que crean oportunidades para experiencias nuevas y enriquecidas, comprendemos la importancia de que sean los usuarios los que decidan hacerlo por sí mismos. 
+
+Entre los ejemplos de datos de diagnóstico opcionales pueden incluirse los datos de uso de la aplicación, la información de errores y los datos de rendimiento. Todos los datos de diagnóstico que Microsoft recopila durante el uso de cualquier aplicación Microsoft 365 para aplicaciones y servicios empresariales se seudonimizan, tal y como se define en el estándar ISO/IEC 19944:2017 (sección 8.3.3).
+
+## <a name="certain-end-user-data-or-content-is-never-collected"></a>Algunos datos o contenido de usuario final nunca se recopilan
+
+Intune no recopila ni permite que un administrador vea el historial de llamadas o de exploración web de los usuarios finales, ni el correo electrónico personal, los mensajes de texto, los contactos, las contraseñas de cuentas personales, los eventos de calendario o las fotos, tanto las de aplicaciones de fotografía como las que proceden de una cámara de fotos. Consulte [Introducción a la inscripción de dispositivos](../enrollment/device-enrollment.md).
+
+Consulte [Cómo categoriza Microsoft los datos para servicios online](https://www.microsoft.com/trust-center/privacy/customer-data-definitions) para más información sobre los tipos y la definición de datos. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

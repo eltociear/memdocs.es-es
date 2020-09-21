@@ -2,11 +2,11 @@
 title: Auditoría, exportación o eliminación de datos personales
 titleSuffix: Microsoft Intune
 description: Obtenga más información sobre cómo auditar, exportar o eliminar datos personales.
-keywords: ''
+keywords: RGPD, datos personales y privacidad
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996000"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012636"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Auditoría, exportación o eliminación de datos personales en Intune
 
@@ -60,10 +60,10 @@ Hay tres formas de eliminar los datos personales de la administración de Intune
 
 ### <a name="delete-a-user-from-intune"></a>Eliminación de un usuario de Intune
 
-Para eliminar los datos personales de un usuario final de Intune, un administrador debe [eliminar el usuario de Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Cuando se elimina el usuario de AAD (eliminación permanente), Intune recibe la señal de eliminación de AAD y, después, comienza a purgar automáticamente todos los datos personales del usuario del servicio de Intune. La información del usuario se eliminará del servicio de Intune en un plazo de 30 días a partir de la acción de eliminación.
+Para eliminar de Intune los datos personales de un usuario final, un administrador debe [eliminar el usuario de Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Cuando se elimina el usuario de Azure AD (eliminación permanente), Intune recibe la señal de eliminación de Azure AD y, después, comienza a purgar automáticamente todos los datos personales del usuario del servicio Intune. La información del usuario se eliminará del servicio de Intune en un plazo de 30 días a partir de la acción de eliminación.
 
 ### <a name="reset-device-to-factory-settings"></a>Restablecimiento de los valores de fábrica del dispositivo
-La restauración de los valores de fábrica permite restaurar todos los datos personales y de empresa, así como las opciones de configuración, a los valores originales de fábrica. Resulta una opción muy útil para proporcionar un dispositivo a otro empleado. Los archivos de usuario, las aplicaciones instaladas y los valores no predeterminados dejan de estar disponibles y se eliminan del servicio de Intune en 30 días tras eliminarlos del dispositivo.
+La restauración de los valores de fábrica permite restaurar todos los datos personales y de empresa, así como las opciones de configuración, a los valores originales de fábrica. Resulta una opción muy útil para proporcionar un dispositivo a otro empleado. Los archivos de usuario, las aplicaciones instaladas por el usuario y la configuración no predeterminada se eliminan y estos datos se quitan del servicio Intune al cabo de 30 días tras la acción de eliminación.
 
 ### <a name="user-self-removal-from-intune-management"></a>Eliminación automática de usuarios desde la administración de Intune
 Los usuarios pueden quitar sus dispositivos [Android, Apple o Windows](../user-help/unenroll-your-device-from-intune-android.md) personales desde la administración de Intune sin la asistencia del administrador.   
@@ -77,4 +77,4 @@ Si un cliente de inquilino de Intune cancela su cuenta de Intune, todos los dato
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga más información sobre cómo [auditar, exportar o eliminar](privacy-data-audit-export-delete.md) datos personales en Intune.
+Descubra cómo [ver y corregir los datos personales](privacy-data-view-correct.md) en Intune.

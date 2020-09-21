@@ -1,11 +1,11 @@
 ---
-title: Solución de problemas con la inscripción de dispositivos de Windows 10 | Microsoft Docs
-description: ''
+title: Solución de problemas de acceso de dispositivo Windows 10 a las cuentas profesionales o educativas | Microsoft Intune
+description: Resuelva los problemas de acceso o conexión a las cuentas en dispositivos Windows 10 inscritos.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881756"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643434"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Solución de problemas con la inscripción de dispositivos de Windows 10
-Si ha inscrito el dispositivo pero todavía no puede acceder a sus archivos y dirección de correo electrónico profesional o educativa, pruebe estos pasos de solución de problemas.  
+# <a name="troubleshoot-windows-10-device-access"></a>Solución de problemas de acceso de dispositivos Windows 10
+En este artículo se describe cómo resolver los problemas de acceso de dispositivos Windows 10 inscritos. 
 
-1. Examine las dos pantallas siguientes y encuentre la que sea similar a lo que ve en el dispositivo. Siga los pasos que tienen que ver con la pantalla que verá en el dispositivo.
+## <a name="check-wi-fi-connection"></a>Comprobación de la conexión Wi-Fi  
 
-    Si aparece esta pantalla, siga los pasos de [Pasos de solución de problemas a seguir si ve acceso profesional o educativo](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+Se necesita una conexión Wi-Fi para acceder a recursos profesionales o educativos. Compruebe que está conectado a la red Wi-Fi y, luego, intente acceder de nuevo a los recursos.  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>Adición de una cuenta profesional o educativa en la aplicación de configuración  
+Estos pasos son los mismos que se usarían para inscribir el dispositivo. Sin embargo, si la cuenta no aparece en **Configuración**, es necesario volver a ejecutar estos pasos.  
 
-    Si aparece esta pantalla, siga los pasos de [Pasos de solución de problemas a seguir si ve su cuenta](#troubleshooting-steps-to-follow-if-you-see-your-account).
+1. Abra la aplicación **Configuración**. 
+2. Seleccione **Cuentas**.
+3. El siguiente paso varía en función de la versión de Windows 10 que use. 
+    * Versión 1607 y posteriores: Seleccione **Acceso profesional o educativo**.
+    * Versión 1511 y anteriores: Seleccione **Acceso al trabajo**.  
+4. Compruebe su cuenta. Si no aparece, seleccione el botón con el signo de más **Conectar** para agregarla. 
+5. Inicie sesión con las credenciales de su trabajo o escuela. 
+6. Para finalizar la conexión, siga las indicaciones en pantalla.  
+7. Cuando haya finalizado, la cuenta se agregará como una conexión. Tendrá acceso a los recursos que la organización ponga a su disposición.   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>Contacto con el servicio de soporte técnico de TI para conocer los requisitos de acceso  
+Si ve su cuenta profesional o educativa en la aplicación de configuración, el dispositivo y la cuenta ya están conectados. Póngase en contacto con el personal de soporte técnico de TI para que le ayude con los problemas de acceso. Puede que tengan restricciones o requisitos que impidan el acceso a determinados recursos.  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Pasos de solución de problemas a seguir si ve "Acceso profesional o educativo"
+## <a name="error-messages"></a>Mensajes de error  
 
-1. Si después de seguir los pasos anteriores, no consigue tener acceso a los archivos y al correo electrónico profesional o educativo, vuelva a **Acceso profesional o educativo**.
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>No pudimos detectar automáticamente un extremo de administración que coincida con el nombre de usuario escrito. Compruebe su nombre de usuario y vuelva a intentarlo. Si conoces la dirección URL para el extremo de administración, escríbela.
 
-2. Realice una de las siguientes acciones:
+**Causa**: no se pudo comprobar la cuenta junto con la dirección URL proporcionada (que también se conoce como punto de conexión de administración).  
 
-   - Si ve una conexión similar a la siguiente imagen, selecciónela y, a continuación, compruebe que ve las opciones Administrar, Información y Desconectar. Si ve estas opciones, ya está inscrito y conectado.
+#### <a name="resolution"></a>Solución
+1. Vuelva a escribir su nombre de usuario y contraseña. 
+2. Si sigue sin funcionar, póngase en contacto con el personal de soporte técnico de TI para obtener la dirección URL correcta (por ejemplo, www.yourcompany.onmicrosoft.com). 
+3. Cuando se le solicite, escriba la dirección URL proporcionada. 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>It looks like you're not connected. Make sure you're connected to the network (Parece que no está conectado. Asegúrese de que está conectado a la red).
 
-   - Si no ve la información de conexión que se muestra arriba, o la ve, pero carece de algunas de las opciones, seleccione **Conectar**. Después, inicie sesión con las credenciales de la cuenta profesional o educativa para conectarse.  
+**Causa**: el dispositivo no está conectado a la red Wi-Fi y hace falta una conexión para agregar una cuenta profesional o educativa.     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Pasos de solución de problemas a seguir si ve "Su cuenta"
+#### <a name="resolution"></a>Solución
+1. En la barra de herramientas o en la configuración del dispositivo, seleccione el icono de globo **Estado de red**.
+2. Seleccione una red Wi-Fi > **Conectar**.  
+3. Intente volver a conectar su cuenta.  
 
-Si después de seguir los pasos anteriores, no consigue tener acceso al correo, a los archivos y a otros datos laborales o educativos, vuelva a **Cuentas** y pulse **Acceso profesional**.
 
-- Si ve su cuenta profesional o educativa en la lista, está conectado.  
+## <a name="next-steps"></a>Pasos siguientes  
 
-- Si no la ve, pulse en **Conectar** y luego inicie sesión con sus credenciales laborales o educativas.
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Pasos de solución de problemas a seguir si ve "Configurar una cuenta profesional o educativa"
-
-Si ve un mensaje que dice <strong>No pudimos detectar automáticamente un punto de conexión de administración que coincida con el nombre de usuario escrito. Compruebe su nombre de usuario y vuelva a intentarlo. Si conoce la dirección URL para el punto de conexión de administración, escríbala.</strong>, entonces debe intentar volver a escribir su nombre de usuario y contraseña. Si todavía no funciona, debe consultar con el equipo de soporte técnico de su empresa el sitio web que necesita proporcionar en el cuadro de texto <strong>Punto de conexión de administración</strong>. Este es un sitio web que probablemente tenga este aspecto <strong>www.yourcompany.onmicrosoft.com</strong>.
-
-¿Aún necesita ayuda? Póngase en contacto con el departamento de soporte técnico de la empresa. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).
+¿Aún necesita ayuda? Póngase en contacto con el personal de soporte técnico de TI. Para averiguar su información de contacto, vaya al [sitio web del portal de empresa](https://go.microsoft.com/fwlink/?linkid=2010980).

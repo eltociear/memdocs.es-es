@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906827"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076148"
 ---
 # <a name="see-device-details-in-intune"></a>Ver detalles del dispositivo en Intune
 
@@ -105,7 +105,7 @@ En función del operador que usen los dispositivos, puede que no se recopilen to
 |Cifrado|Si se establece en **Sí**, los datos almacenados en el dispositivo se cifran.|Windows, iOS/iPadOS y Android|
 
 > [!Note]  
-> El número de teléfono no está inventariado en dispositivos Android Enterprise dedicados o totalmente administrados.
+> El número de teléfono no forma parte del inventario de dispositivos Android Enterprise dedicados, totalmente administrados o corporativos con perfil de trabajo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 Vea qué más puede hacer para [administrar sus dispositivos](device-management.md) con Intune.

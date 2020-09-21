@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327050"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643647"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Inicio rápido: Inscripción de dispositivos Windows 10
 
@@ -87,7 +87,7 @@ Antes de inscribir Windows 10 Escritorio, debe comprobar la versión de Windows 
 
    ![Captura de pantalla de la cuenta recién agregada](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Si, después de seguir los pasos anteriores, no consigue tener acceso a la cuenta de correo electrónico profesional o educativo y a los archivos, siga los pasos de [Pasos de solución de problemas que se deben seguir si ve acceso profesional o educativo](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Si después de seguir los pasos anteriores, no consigue tener acceso a la cuenta de correo electrónico profesional o educativa ni a los archivos, siga los pasos que se describen en [Solución de problemas con la inscripción de dispositivos de Windows 10](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Comprobar la inscripción de los dispositivos en Intune
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991079"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076182"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Solución de problemas de comunicación entre un dispositivo y el servidor NDES para perfiles de certificado SCEP en Microsoft Intune
 
@@ -76,8 +76,8 @@ Revise el [registro OMADM de los dispositivos](troubleshoot-scep-certificate-pro
 Las entradas clave incluyen las siguientes cadenas de texto de ejemplo:
 
 - Hay 1 solicitud
-- Se recibió "200 OK" al enviar GetCACaps(ca) a https://\<server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
-- Firma de pkiMessage usando la clave que pertenece a [dn=CN=\<username>; serial=1]
+- Se recibió el mensaje "200 OK" al enviar GetCACaps(ca) a https://\<server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
+- Firmando pkiMessage usando la clave que pertenece a [dn=CN=\<username>; serial=1]
 
 
 IIS registra también la conexión en la carpeta %SystemDrive%\inetpub\logs\LogFiles\W3SVC1\ del servidor NDES. Este es un ejemplo:
@@ -191,6 +191,7 @@ Al ir a la dirección URL del servidor SCEP, recibe el siguiente mensaje del ser
   ```
 
   Si se produce un error en la instalación, quite el conector de Microsoft Intune y, a continuación, vuelva a instalarlo.
+  Si la instalación se realizó correctamente y sigue recibiendo el mensaje de NDES general, ejecute el comando **iisreset** para reiniciar IIS.
 
 #### <a name="http-error-503"></a>HTTP Error 503
 

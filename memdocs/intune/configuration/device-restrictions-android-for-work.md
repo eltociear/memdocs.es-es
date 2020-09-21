@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194113"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606956"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Configuración de dispositivos Android Enterprise para permitir o restringir características mediante Intune
 
@@ -35,13 +35,13 @@ En este artículo se enumeran y describen los diferentes valores de configuraci�
 
 Esta configuración se aplica a los tipos de inscripción Android Enterprise donde Intune controla todo el dispositivo, como los dispositivos de perfil de trabajo Android Enterprise de propiedad corporativa, dedicado y totalmente administrado.
 
-Ciertos tipos de inscripción no admiten algunos valores de configuración. Para ver qué configuración se admite con qué tipos de inscripción, consulte la interfaz de usuario. Cada configuración está bajo un encabezado que indica los tipos de inscripción que pueden utilizar esa configuración.
+Ciertos tipos de inscripción no admiten algunos valores de configuración. Para ver qué configuración se admite con qué tipos de inscripción, consulte la interfaz de usuario. Cada valor de configuración está bajo un encabezado que indica los tipos de inscripción que pueden utilizar ese valor.
 
-![Establecimiento de los encabezados](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Consulte los encabezados de configuración de usuarios y cuentas de Android Enterprise y los tipos de inscripción a los que se aplican en Microsoft Intune y Endpoint Manager.":::
 
 Algunos valores de configuración solo se aplican en el nivel de perfil de trabajo en dispositivos de propiedad corporativa con un perfil de trabajo. Esta configuración se seguirá aplicando a todo el dispositivo en el caso de los dispositivos de perfil de trabajo dedicado y totalmente administrado. Esta configuración se marca con el descriptor *(nivel de perfil de trabajo)* en la interfaz de usuario.
 
-![Establecimiento de los encabezados](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Consulte la configuración de aplicaciones de Android Enterprise que se aplica en el nivel de perfil de trabajo en Microsoft Intune y Endpoint Manager.":::
 
 
 ### <a name="general"></a>General
@@ -239,7 +239,7 @@ Use estas opciones para configurar una experiencia de tipo pantalla completa en 
 - **Totalmente administrado**: configura la aplicación Microsoft Launcher en los dispositivos totalmente administrados.
 
   - **Hacer que Microsoft Launcher sea el iniciador predeterminado**: **Habilitar** establece Microsoft Launcher como el iniciador predeterminado en la pantalla principal. Si hace que Launcher sea el iniciador predeterminado, los usuarios no podrán usar otro. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, Microsoft Launcher no se fuerza como iniciador predeterminado.
-  - **Configurar papel tapiz personalizado**: **Habilitar** permite aplicar una imagen propia como papel tapiz de la pantalla principal y elegir si los usuarios pueden cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo conserva el papel tapiz actual.
+  - **Configurar papel tapiz personalizado**: en la aplicación Microsoft Launcher, **Habilitar** permite aplicar una imagen propia como papel tapiz de la pantalla principal y elegir si los usuarios pueden cambiarla. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, el dispositivo conserva el papel tapiz actual.
     - **Escribir URL de la imagen de papel tapiz**: escriba la dirección URL de la imagen del papel tapiz. Esta imagen se muestra en la pantalla principal del dispositivo. Por ejemplo, escriba `http://www.contoso.com/image.jpg`. 
     - **Permitir al usuario modificar el papel tapiz**: **Habilitar** permite a los usuarios cambiar la imagen del papel tapiz. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, los usuarios no pueden cambiarla.
   - **Habilitar fuente de Launcher**: **Habilitar** activa la fuente de Launcher, que muestra los calendarios, los documentos y las actividades recientes. Cuando se establece en **Sin configurar** (valor predeterminado), Intune no cambia ni actualiza esta configuración. De forma predeterminada, esta fuente no se muestra.

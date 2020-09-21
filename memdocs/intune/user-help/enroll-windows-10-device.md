@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179594"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643500"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Inscribir dispositivos Windows 10 en Portal de empresa de Intune
 
@@ -65,10 +65,6 @@ Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 160
 8. Para volver a comprobar la conexión, vuelva a **Configuración** > **Cuentas** > **Obtener acceso a trabajo o escuela**.  Ahora debe aparecer la cuenta.  
 
 
-    ![Compruebe que la conexión se ha configurado correctamente](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-¿Sigue sin poder acceder a su correo electrónico, archivos u otros datos profesionales o educativos? Obtenga información sobre cómo [solucionar problemas de una cuenta](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
-
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Inscribir un dispositivo de la versión 1511 y anteriores de Windows 10  
 Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 1511 y anteriores.  
 
@@ -91,7 +87,10 @@ Estos pasos explican cómo inscribir un dispositivo con Windows 10, versión 151
 
     ![Iniciar sesión](./media/W10-enroll-4-sign-in.png)  
 
-¿Sigue sin poder acceder a su correo electrónico, archivos u otros datos profesionales o educativos? Obtenga información sobre cómo [solucionar problemas relacionados con una cuenta](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) durante la inscripción.  
+
+## <a name="troubleshooting"></a>Solución de problemas 
+Puede encontrar una lista no exhaustiva de mensajes de error y otras soluciones de conexión en [Solución de problemas de acceso de dispositivos Windows 10](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## <a name="it-administrator-support"></a>Soporte técnico para administradores de TI   
 

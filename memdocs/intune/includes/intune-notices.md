@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564112"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045122"
 ---
 Estos avisos proporcionan información importante que puede ayudarle a prepararse para las características y los cambios futuros de Intune.
 
@@ -108,7 +108,7 @@ En ese momento, los dispositivos administrados por el administrador de dispositi
 - La identificación de los dispositivos como propiedad de la empresa con el número IMEI o el número de serie no marcará automáticamente los dispositivos como propiedad de la empresa. 
 - El número IMEI y el número de serie ya no serán visibles para los administradores de TI en Intune. 
 
-**Android 11**: seguimos comprobando la última versión beta de Android 11 para evaluar el impacto en los dispositivos administrados por el administrador de dispositivos. Hemos detectado lo siguiente: 
+**Android 11**: estos son los cambios que afectarán al dispositivo administrado por el administrador de dispositivos cuando se actualice a Android 11: 
 - En el caso de los dispositivos del administrador de dispositivos (excepto Samsung) que ejecutan Android 11 y versiones posteriores, Google quitó la capacidad de los agentes de administración como Portal de empresa de forzar el bloqueo de la cámara antes de que la aplicación de Portal de empresa se actualizara en octubre. Se seguirán aplicando las directivas de bloqueo de la cámara que se aplican a los dispositivos antes de que se actualicen a Android 11.  
 - Con Android 11, ya no se pueden implementar certificados raíz de confianza en dispositivos inscritos con el administrador de dispositivos (excepto en dispositivos Android). Los usuarios deben instalar manualmente el certificado raíz de confianza en el dispositivo. Con el certificado raíz de confianza instalado manualmente en un dispositivo, puede usar SCEP para aprovisionar certificados en el dispositivo. En este caso, sigue teniendo que crear e implementar una directiva de certificado de confianza en el dispositivo y vincularla al perfil del certificado SCEP. 
     - Si el certificado raíz de confianza está en el dispositivo, el perfil de certificado SCEP se instalará correctamente.  

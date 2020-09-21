@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 5a2a82d63b4b13f16ced558ae515c3100a8a21ad
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410851"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039421"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Administración de transferencias de datos entre aplicaciones iOS en Microsoft Intune
 
@@ -61,7 +61,9 @@ La configuración del valor de UPN de usuario es **necesaria** para los disposit
 
      > [!NOTE]
      > Implemente la configuración de la aplicación de IntuneMAMUPN en la aplicación administrada de destino que envía datos, no la aplicación receptora. 
-
+     
+     > [!NOTE]
+     > Actualmente, no se admite la inscripción con un usuario diferente en una aplicación si hay una cuenta inscrita en MDM en el mismo dispositivo. 
 
 4. Implemente la directiva de **administración Open In**  con Intune o a través de su proveedor de MDM externo en los dispositivos inscritos.
 

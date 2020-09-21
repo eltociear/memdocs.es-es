@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990680"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081797"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Incorporación de una aplicación de línea de negocio de iOS a Microsoft Intune
 
@@ -35,13 +35,15 @@ Use la información de este artículo para agregar una aplicación de línea de 
 > Los usuarios de dispositivos iOS pueden quitar algunas de las aplicaciones iOS integradas, como Bolsa y Mapas. No puede usar Intune para volver a implementar esas aplicaciones. Si los usuarios eliminan estas aplicaciones, deben ir a la tienda de aplicaciones y reinstalarlas manualmente.
 >
 > Las aplicaciones LOB de iOS tienen un límite de tamaño máximo de 2 GB por aplicación.
+>
+> Los iPad compartidos de Apple no admiten aplicaciones de línea de negocio.
 
 > [!NOTE]
 > Los identificadores de paquete (por ejemplo, *com.contoso.app*) están diseñados para ser identificadores únicos de una aplicación. Por ejemplo, para instalar una versión beta de una aplicación de línea de negocio junto a la versión de producción con fines de prueba, la versión beta debe tener otro identificador único (por ejemplo, *com.contoso.app-beta*). De lo contrario, la versión beta se superpondrá a la de producción y se tratará como una actualización. El cambio del nombre del archivo .ipa no tiene ningún efecto en este comportamiento.
 
 ## <a name="select-the-app-type"></a>Selección del tipo de aplicación
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar tipo de aplicación**, en los **Otros** tipos de aplicaciones, seleccione **Aplicación de línea de negocio**.
 4. Haga clic en **Seleccionar**. Se muestran los pasos para **Agregar aplicación**.

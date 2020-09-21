@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423734"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643623"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configuración y uso de certificados PKCS con Intune
 
@@ -140,9 +140,13 @@ Antes de comenzar, [revise los requisitos del conector](certificate-connectors.m
    > [!WARNING]
    > De forma predeterminada, en Windows Server, la opción **Configuración de seguridad mejorada de Internet Explorer** está establecida en **Activada**, lo que puede causar problemas con el inicio de sesión en Office 365.
 
-6. Cierre la ventana.
+6. Seleccione la pestaña **Cuenta de CA** y escriba las credenciales de una cuenta que tenga el permiso Emitir y administrar certificados en la entidad de certificación emisora. Estas credenciales se usarán para realizar la revocación de certificados en la entidad de certificación. 
 
-7. En el Centro de administración de Microsoft Endpoint Manager, vuelva a **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificado**. En unos minutos, se muestra una marca de verificación verde y se actualiza el estado de la conexión. El servidor del conector puede comunicarse ahora con Intune.
+    **Aplique** los cambios.
+
+7. Cierre la ventana.
+
+8. En el Centro de administración de Microsoft Endpoint Manager, vuelva a **Administración de inquilinos** > **Conectores y tokens** > **Conectores de certificado**. En unos minutos, se muestra una marca de verificación verde y se actualiza el estado de la conexión. El servidor del conector puede comunicarse ahora con Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Creación de un perfil de certificado de confianza
 

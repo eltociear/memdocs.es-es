@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051598"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076131"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Configuración de la página de estado de la inscripción
  
@@ -122,8 +122,8 @@ Durante la preparación del dispositivo, la página de estado de la inscripción
 La página de estado de la inscripción realiza el seguimiento de los siguientes elementos de configuración del dispositivo:
 
 - Directivas de seguridad
-  - Un proveedor de servicios de configuración (CSP) para todas las inscripciones.
-  - El seguimiento de los CSP reales configurados por Intune no se realiza aquí.
+  - Actualmente se realiza un seguimiento de las directivas de Microsoft Edge, Acceso asignado y Kiosk Browser.
+  - No se realiza el seguimiento de otras directivas.
 - Aplicaciones
   - Aplicaciones MSI de línea de negocio (LoB) por equipo.
   - Aplicaciones de almacén de LoB con contexto de instalación = Dispositivo.
@@ -138,8 +138,8 @@ La página de estado de la inscripción realiza el seguimiento de los siguientes
 Para la configuración de la cuenta, la página de estado de la inscripción realiza un seguimiento de estos elementos si están asignados al usuario con sesión iniciada en ese momento:
 
 - Directivas de seguridad
-  - Un CSP para todas las inscripciones.
-  - El seguimiento de los CSP reales configurados por Intune no se realiza aquí.
+  - Actualmente se realiza un seguimiento de las directivas de Microsoft Edge, Acceso asignado y Kiosk Browser.
+  - No se realiza el seguimiento de otras directivas.
 - Aplicaciones
   - Aplicaciones de MSI de LoB por usuario que están asignadas a todos los dispositivos, a todos los usuarios a un grupo de usuarios del que es miembro el usuario que está inscribiendo el dispositivo.
   - Aplicaciones de MSI de LoB por equipo que están asignadas a todos los usuarios o a un grupo de usuarios del que es miembro el usuario que está inscribiendo el dispositivo.
@@ -152,53 +152,6 @@ Para la configuración de la cuenta, la página de estado de la inscripción rea
   - Perfiles de VPN o Wi-Fi que están asignados a todos los usuarios o a un grupo de usuarios del que es miembro el usuario que está inscribiendo el dispositivo.
 - Certificados
   - Perfiles de certificado que están asignados a todos los usuarios o a un grupo de usuarios del que es miembro el usuario que está inscribiendo el dispositivo.
-
-### <a name="troubleshooting"></a>Solución de problemas
-
-A continuación se muestran algunas preguntas comunes para solucionar problemas relacionados con la página de estado de la inscripción.
-
-- ¿Por qué las aplicaciones no se han instalado ni se les ha realizado el seguimiento mediante la página de estado de la inscripción?
-  - Para garantizar qué las aplicaciones se instalan y se les realiza el seguimiento mediante la página de estado de la inscripción, asegúrese de que:
-      - Las aplicaciones se asignan a un grupo de Azure AD que contiene el dispositivo (para aplicaciones destinadas a dispositivos) o el usuario (para las destinadas a usuarios), mediante una asignación "necesaria".  (Se realiza el seguimiento de las aplicaciones destinadas a dispositivos durante la fase de dispositivo de ESP, mientras que el de las aplicaciones dirigidas al usuario se realiza durante la fase de usuario de ESP).
-      - Puede especificar **Bloquear el uso del dispositivo hasta que todos los perfiles y aplicaciones estén instalados** o incluir la aplicación en la lista **Bloquear el uso del dispositivo hasta que las aplicaciones requeridas estén instaladas**.
-      - Las aplicaciones se instalan en el contexto de dispositivo y no tienen reglas de aplicabilidad de contexto de usuario.
-
-- ¿Por qué se muestra la página de estado de la inscripción en las implementaciones que no son de Autopilot, por ejemplo, cuando un usuario inicia sesión por primera vez en un dispositivo inscrito en la administración conjunta de Configuration Manager?  
-  - En la página de estado de la inscripción se muestra el estado de instalación de todos los métodos de inscripción. Por ejemplo:
-      - Autopilot
-      - Configuration Manager y administración conjunta
-      - Cuando un usuario nuevo inicia sesión por primera vez en el dispositivo que tiene aplicada la directiva de página de estado de la inscripción
-      - Cuando la opción **Mostrar solo la página en los dispositivos aprovisionados por la configuración rápida (OOBE)** está activada y la directiva se establece, solo el primer usuario que inicie sesión en el dispositivo obtiene la página de estado de la inscripción.
-
-- ¿Cómo se puede deshabilitar la página de estado de la inscripción si se ha configurado en el dispositivo?
-  - La directiva de página de estado de la inscripción se establece en un dispositivo en el momento de la inscripción. Para deshabilitar esta página, debe deshabilitar las secciones de la página de estado de la inscripción de dispositivos y usuarios. Para ello, cree valores personalizados de OMA-URI con las siguientes configuraciones.
-
-      Deshabilitar la página de estado de la inscripción de usuario:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Deshabilitar la página de estado de la inscripción de dispositivo:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- ¿Cómo puedo recopilar los archivos de registro?
-  - Hay dos maneras de recopilar los archivos de registro de la página de estado de la inscripción:
-      - Permitir la posibilidad de que los usuarios recopilen registros en la directiva ESP. Cuando se agota el tiempo de expiración en la página de estado de la inscripción, el usuario final puede elegir la opción **Recopilar registros**. Al insertar una unidad USB, los archivos de registro se pueden copiar en ella.
-      - Abra un símbolo del sistema con la secuencia de teclas Mayús + F10 y, luego, escriba la siguiente línea de comandos para generar los archivos de registro: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>Problemas conocidos
 
@@ -219,4 +172,6 @@ A continuación se indican los problemas conocidos relacionados con la página d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Tras configurar las páginas de inscripción de Windows, descubra cómo administrar dispositivos Windows. Para obtener más información, consulte [¿Qué es la administración de dispositivos de Microsoft Intune?](../remote-actions/device-management.md)
+Tras configurar las páginas de inscripción de Windows, aprenda a [administrar los dispositivos Windows](../remote-actions/device-management.md).
+
+[Solución de problemas de la página de estado de la inscripción de Windows](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

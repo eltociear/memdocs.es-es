@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 7d16fc974e268b03b89ecd984bfbf56637ae47c0
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564285"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039387"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Eliminación de dispositivos mediante el borrado, la retirada o la anulación manual de la inscripción del dispositivo
 
@@ -168,7 +168,7 @@ Puede configurar Intune para eliminar automáticamente los dispositivos que pare
 4. Elija **Guardar**.
 
 > [!NOTE]
-> Las reglas de limpieza de dispositivos no están disponibles en escenarios de Android Enterprise de tipo [totalmente administrado](../enrollment/android-fully-managed-enroll.md), [dedicado](../enrollment/android-kiosk-enroll.md) y [propiedad corporativa con perfil de trabajo](../enrollment/android-corporate-owned-work-profile-enroll.md). 
+> Las reglas de limpieza de dispositivos no están disponibles en dispositivos administrados por Jamf ni en escenarios de Android Enterprise de tipo [totalmente administrado](../enrollment/android-fully-managed-enroll.md), [dedicado](../enrollment/android-kiosk-enroll.md) y [corporativo con perfil de trabajo](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Eliminación de dispositivos en el portal de Azure Active Directory
 

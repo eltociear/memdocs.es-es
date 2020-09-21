@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: ac359871b9f565b66d6d179048ae8c64ebf5392d
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574584"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779521"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Solución de problemas de Windows AutoPilot
 
@@ -93,7 +93,7 @@ Cuando OOBE incluye un comportamiento inesperado de AutoPilot, resulta útil com
 
 ### <a name="windows-10-version-1803-and-above"></a>Windows 10 versión 1803 y versiones posteriores
 
-La versión 1803 y posteriores de Windows 10 agrega entradas del registro de eventos. Puede usar las entradas de OG para ver los detalles relacionados con la configuración del perfil de AutoPilot y el flujo de OOBE. Estas entradas se pueden ver mediante Visor de eventos. Revise la información en **registros de aplicaciones y servicios: > Microsoft – > Windows – > provisioning-Diagnostics-Provider – > AutoPilot** para las versiones anteriores a 1903. Para la versión 1903 y versiones posteriores, consulte **registros de aplicaciones y servicios: > Microsoft – > Windows – > ModernDeployment-Diagnostics-Provider – > AutoPilot**. Se pueden registrar los siguientes eventos, en función del escenario y de la configuración del perfil:
+La versión 1803 y posteriores de Windows 10 agrega entradas del registro de eventos. Puede usar las entradas del registro para ver los detalles relacionados con la configuración del perfil de AutoPilot y el flujo de OOBE. Estas entradas se pueden ver mediante Visor de eventos. Revise la información en **registros de aplicaciones y servicios: > Microsoft – > Windows – > provisioning-Diagnostics-Provider – > AutoPilot** para las versiones anteriores a 1903. Para la versión 1903 y versiones posteriores, consulte **registros de aplicaciones y servicios: > Microsoft – > Windows – > ModernDeployment-Diagnostics-Provider – > AutoPilot**. Se pueden registrar los siguientes eventos, en función del escenario y de la configuración del perfil:
 
 | Id. de evento | Tipo | Descripción |
 |----------|------|-------------| 
@@ -116,7 +116,7 @@ Además de las entradas del registro de eventos, el registro y las opciones de s
 
 La configuración del perfil de AutoPilot recibida del servicio de implementación de AutoPilot se almacena en el registro del dispositivo. Esta información puede encontrarse en **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Entre las entradas del registro disponibles se incluyen:
 
-| Valor | Descripción |
+| Value | Descripción |
 |-------|-------------|
 | AadTenantId | GUID del inquilino de Azure AD en el que el usuario inició sesión. El usuario recibe un error si esta entrada no coincide con el inquilino que se usó para registrar el dispositivo. |
 | CloudAssignedTenantDomain | El Azure AD inquilino con el que se ha registrado el dispositivo, por ejemplo, "contosomn.onmicrosoft.com". Si el dispositivo no está registrado con AutoPilot, este valor estará en blanco. |

@@ -17,28 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23af858db709deb041fa1259d7c7d203eaa65dd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 148e549d72c3d5802bc9d86f7d0fd81d55b21aa7
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217720"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039234"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Incorporación de una aplicación de línea de negocio de Android a Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Una aplicación de línea de negocio (LOB) es aquella que se agrega a Intune desde un archivo de instalación de la aplicación. Este tipo de aplicación normalmente se escribe localmente. Intune instala la aplicación de línea de negocio en el dispositivo del usuario. 
+Una aplicación de línea de negocio (LOB) es aquella que se agrega a Intune desde un archivo de instalación de la aplicación. Este tipo de aplicación normalmente se escribe localmente. Intune instala la aplicación de línea de negocio en el dispositivo del usuario. Se aplica solo a los dispositivos administrados mediante el Administrador de dispositivos.
 
 > [!Note]
 > Para más información sobre las aplicaciones de línea de negocio y la consola para desarrolladores de Google Play, consulte [Publicación de aplicaciones privadas (LOB) de Google Play administrado con la consola para desarrolladores de Google](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
 
 > [!Note]
-> Para más información sobre los dispositivos Android for Work, consulte [Incorporación de aplicaciones de Google Play administrado a dispositivos de Android Enterprise con Intune](apps-add-android-for-work.md). 
+> En el caso de los dispositivos de Android Enterprise, consulte [Incorporación de aplicaciones de Google Play administrado a dispositivos de Android Enterprise con Intune](apps-add-android-for-work.md). 
 
 ## <a name="select-the-app-type"></a>Selección del tipo de aplicación
 
-1. Inicie sesión en el [Centro de administración de Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Inicie sesión en el [Centro de administración del Administrador de puntos de conexión de Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Seleccione **Aplicaciones** > **Todas las aplicaciones** > **Agregar**.
 3. En el panel **Seleccionar tipo de aplicación**, en los **Otros** tipos de aplicaciones, seleccione **Aplicación de línea de negocio**.
 4. Haga clic en **Seleccionar**. Se muestran los pasos para **Agregar aplicación**.

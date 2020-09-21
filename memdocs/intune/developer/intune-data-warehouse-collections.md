@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993117"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608095"
 ---
 # <a name="intune-data-warehouse-collections"></a>Colecciones de almacenamiento de datos de Intune
 
@@ -34,30 +34,30 @@ La entidad **appRevision** muestra todas las versiones de las aplicaciones.
 
 |          Propiedad          |                                      Descripción                                      |                Ejemplo               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | Identificador único de la aplicación.                                                         | 123                                  |
-| ApplicationId              | Identificador único de la aplicación. Se parece a AppKey, pero es una clave natural.        | b66bc706-ffff-7437-0340-032819502773 |
-| Revisión                   | Versión tal como la indicó el administrador durante la carga del archivo binario.                   | 2                                    |
-| Título                      | Título de la aplicación.                                                                     | Excel                                |
-| Publicador                  | Editor de la aplicación.                                                                 | Microsoft                            |
-| UploadState                | Estado de carga de la aplicación.                                                              | 1                                    |
-| AppTypeKey                 | Referencia a AppType descrita en la sección siguiente.                            | 1                                    |
-| VppProgramTypeKey          | Referencia a VppProgramType descrita a continuación.                                        | 30876                                |
-| CreationTime               | La hora de creación de esta revisión.                                            | 23/11/2016 0:00                      |
-| ModifiedTime               | Hora de la última modificación de cualquier elemento relacionado con esta revisión.                            | 23/11/2016 0:00                      |
-| Tamaño                       | Tamaño del archivo binario en bytes.                                                          | 120,392,000                          |
-| StartDateInclusiveUTC      | Fecha y hora en formato UTC en que se ha creado esta revisión de la aplicación en el almacenamiento de datos.      | 23/11/2016 0:00                      |
-| EndDateExclusiveUTC        | Fecha y hora en formato UTC en que ha quedado obsoleta esta revisión de la aplicación.                        | 23/11/2016 0:00                      |
-| IsCurrent                  | Indica si esta versión de la aplicación está actualizada o no en el almacenamiento de datos.         | Verdadero/Falso                           |
-| RowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se ha modificado por última vez esta versión de la aplicación en el almacenamiento de datos. | 23/11/2016 0:00                      |
+| appKey                     | Identificador único de la aplicación.                                                         | 123                                  |
+| applicationId              | Identificador único de la aplicación. Se parece a AppKey, pero es una clave natural.        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | Versión tal como la indicó el administrador durante la carga del archivo binario.                   | 2                                    |
+| title                      | Título de la aplicación.                                                                     | Excel                                |
+| publisher                  | Editor de la aplicación.                                                                 | Microsoft                            |
+| uploadState                | Estado de carga de la aplicación.                                                              | 1                                    |
+| appTypeKey                 | Referencia a AppType descrita en la sección siguiente.                            | 1                                    |
+| vppProgramTypeKey          | Referencia a VppProgramType descrita a continuación.                                        | 30876                                |
+| creationTime               | La hora de creación de esta revisión.                                            | 23/11/2016 0:00                      |
+| modifiedTime               | Hora de la última modificación de cualquier elemento relacionado con esta revisión.                            | 23/11/2016 0:00                      |
+| tamaño                       | Tamaño del archivo binario en bytes.                                                          | 120,392,000                          |
+| startDateInclusiveUTC      | Fecha y hora en formato UTC en que se ha creado esta revisión de la aplicación en el almacenamiento de datos.      | 23/11/2016 0:00                      |
+| endDateExclusiveUTC        | Fecha y hora en formato UTC en que ha quedado obsoleta esta revisión de la aplicación.                        | 23/11/2016 0:00                      |
+| isCurrent                  | Indica si esta versión de la aplicación está actualizada o no en el almacenamiento de datos.         | Verdadero/Falso                           |
+| rowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se ha modificado por última vez esta versión de la aplicación en el almacenamiento de datos. | 23/11/2016 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
 La entidad **appTypes** muestra el origen de instalación de una aplicación.
 
 |   Propiedad  |        Descripción        |
 |-------------|---------------------------|
-| AppTypeID   | Identificador del tipo.           |
-| AppTypeKey  | Clave suplente de la clave. |
-| AppTypeName | Tipo de aplicación                  |
+| appTypeID   | Identificador del tipo.           |
+| appTypeKey  | Clave suplente de la clave. |
+| appTypeName | Tipo de aplicación                  |
 
 ### <a name="example"></a>Ejemplo
 
@@ -82,28 +82,28 @@ En la tabla siguiente se resume el estado de asignación de directivas de cumpli
 
 |    Propiedad   |                                                                                      Descripción                                                                                     |  Ejemplo |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.                                                                                                                   | 20161204 |
-| Unknown       | Número de dispositivos sin conexión o que no se pudieron comunicar con Intune o Azure AD por otros motivos.                                                                           | 5        |
-| No aplicable | Número de dispositivos a los que no se aplican las directivas de cumplimiento de dispositivos asignadas por el administrador.                                                                                     | 201      |
-| conforme     | Número de dispositivos con una o varias directivas de cumplimiento de dispositivos asignadas por el administrador aplicadas correctamente.                                                                        | 4083     |
-| En período de gracia | Número de dispositivos que no son conformes, pero que se encuentran en el período de gracia definido por el administrador.                                                                                  | 57       |
-| No conforme  | Número de dispositivos a los que no se pudo aplicar una o varias directivas de cumplimiento de dispositivos asignadas por el administrador o en los que el usuario no ha cumplido las directivas asignadas por el administrador. | 43       |
-|    Error      |    Número de dispositivos que no se pudieron comunicar con Intune o Azure AD y devolvieron un mensaje de error.                                                                          |    3     |
+| dateKey       | Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.                                                                                                                   | 20161204 |
+| unknown       | Número de dispositivos sin conexión o que no se pudieron comunicar con Intune o Azure AD por otros motivos.                                                                           | 5        |
+| notApplicable | Número de dispositivos a los que no se aplican las directivas de cumplimiento de dispositivos asignadas por el administrador.                                                                                     | 201      |
+| compliant     | Número de dispositivos con una o varias directivas de cumplimiento de dispositivos asignadas por el administrador aplicadas correctamente.                                                                        | 4083     |
+| inGracePeriod | Número de dispositivos que no son conformes, pero que se encuentran en el período de gracia definido por el administrador.                                                                                  | 57       |
+| nonCompliant  | Número de dispositivos a los que no se pudo aplicar una o varias directivas de cumplimiento de dispositivos asignadas por el administrador o en los que el usuario no ha cumplido las directivas asignadas por el administrador. | 43       |
+|    error      |    Número de dispositivos que no se pudieron comunicar con Intune o Azure AD y devolvieron un mensaje de error.                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 La siguiente tabla resume el estado de asignación de directivas de cumplimiento a dispositivos por directiva y por tipo de directiva. Muestra el número de dispositivos que hay en cada estado de cumplimiento para cada directiva de cumplimiento asignada.
 
 |      Propiedad     |                                                                                      Descripción                                                                                     |  Ejemplo |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.                                                                                                                   | 20161219 |
-| PolicyKey         | Clave de la directiva de cumplimiento para la que se ha creado el resumen.                                                                                                                   | 10178    |
-| PolicyPlatformKey | Clave del tipo de plataforma de la directiva de cumplimiento para la que se ha creado el resumen.                                                                                            | 5        |
-| Unknown           | Número de dispositivos sin conexión o que no se pudieron comunicar con Intune o Azure AD por otros motivos.                                                                           | 13       |
-| No aplicable     | Número de dispositivos a los que no se aplican las directivas de cumplimiento de dispositivos asignadas por el administrador.                                                                                     | 3        |
-| conforme         | Número de dispositivos con una o varias directivas de cumplimiento de dispositivos asignadas por el administrador aplicadas correctamente.                                                                        | 45       |
-| En período de gracia     | Número de dispositivos que no son conformes, pero que se encuentran en el período de gracia definido por el administrador.                                                                                  | 3        |
-| No conforme      | Número de dispositivos a los que no se pudo aplicar una o varias directivas de cumplimiento de dispositivos asignadas por el administrador o en los que el usuario no ha cumplido las directivas asignadas por el administrador. | 7        |
-| Error             | Número de dispositivos que no se pudieron comunicar con Intune o Azure AD y devolvieron un mensaje de error.                                                                             | 3        |
+| dateKey           | Clave de fecha del momento en el que se creó el resumen de la directiva de cumplimiento.                                                                                                                   | 20161219 |
+| policyKey         | Clave de la directiva de cumplimiento para la que se ha creado el resumen.                                                                                                                   | 10178    |
+| policyPlatformKey | Clave del tipo de plataforma de la directiva de cumplimiento para la que se ha creado el resumen.                                                                                            | 5        |
+| unknown           | Número de dispositivos sin conexión o que no se pudieron comunicar con Intune o Azure AD por otros motivos.                                                                           | 13       |
+| notApplicable     | Número de dispositivos a los que no se aplican las directivas de cumplimiento de dispositivos asignadas por el administrador.                                                                                     | 3        |
+| compliant         | Número de dispositivos con una o varias directivas de cumplimiento de dispositivos asignadas por el administrador aplicadas correctamente.                                                                        | 45       |
+| inGracePeriod     | Número de dispositivos que no son conformes, pero que se encuentran en el período de gracia definido por el administrador.                                                                                  | 3        |
+| nonCompliant      | Número de dispositivos a los que no se pudo aplicar una o varias directivas de cumplimiento de dispositivos asignadas por el administrador o en los que el usuario no ha cumplido las directivas asignadas por el administrador. | 7        |
+| error             | Número de dispositivos que no se pudieron comunicar con Intune o Azure AD y devolvieron un mensaje de error.                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      Propiedad      |                       Descripción                      |
@@ -129,24 +129,24 @@ La entidad **date** representa fechas a las que se hace referencia en varias ent
 
 |     Propiedad    |                       Descripción                      |    Ejemplo    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | Identificador único de esta fecha en el almacenamiento de datos. | 20160703      |
-| FullDate        | Esta fecha representada en formato completo de fecha y hora.        | 3/7/2016 0:00 |
-| DayOfWeek       | Día de la semana.                                            | 1             |
-| DayOfMonth      | Día del mes.                                           | 3             |
-| DayOfYear       | Día del año.                                            | 185           |
-| WeekOfYear      | Semana del año.                                           | 28            |
-| MonthOfYear     | Mes del año.                                      | 7             |
-| CalendarQuarter | Trimestre natural.                                       | 3             |
-| CalendarYear    | Año natural.                                          | 2016          |
-| DateKey         | Identificador único de esta fecha en el almacenamiento de datos. | 20160703      |
-| FullDate        | Esta fecha representada en formato completo de fecha y hora.        | 3/7/2016 0:00 |
-| DayOfWeek       | Día de la semana.                                            | 1             |
-| DayOfMonth      | Día del mes.                                           | 3             |
-| DayOfYear       | Día del año.                                            | 185           |
-| WeekOfYear      | Semana del año.                                           | 28            |
-| MonthOfYear     | Mes del año.                                      | 7             |
-| CalendarQuarter | Trimestre natural.                                       | 3             |
-| CalendarYear    | Año natural.                                          | 2016          |
+| dateKey         | Identificador único de esta fecha en el almacenamiento de datos. | 20160703      |
+| fullDate        | Esta fecha representada en formato completo de fecha y hora.        | 3/7/2016 0:00 |
+| dayOfWeek       | Día de la semana.                                            | 1             |
+| dayOfMonth      | Día del mes.                                           | 3             |
+| dayOfYear       | Día del año.                                            | 185           |
+| weekOfYear      | Semana del año.                                           | 28            |
+| monthOfYear     | Mes del año.                                      | 7             |
+| calendarQuarter | Trimestre natural.                                       | 3             |
+| calendarYear    | Año natural.                                          | 2016          |
+| dateKey         | Identificador único de esta fecha en el almacenamiento de datos. | 20160703      |
+| fullDate        | Esta fecha representada en formato completo de fecha y hora.        | 3/7/2016 0:00 |
+| dayOfWeek       | Día de la semana.                                            | 1             |
+| dayOfMonth      | Día del mes.                                           | 3             |
+| dayOfYear       | Día del año.                                            | 185           |
+| weekOfYear      | Semana del año.                                           | 28            |
+| monthOfYear     | Mes del año.                                      | 7             |
+| calendarQuarter | Trimestre natural.                                       | 3             |
+| calendarYear    | Año natural.                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ La entidad **DeviceConfigurationProfileDeviceActivity** muestra el número de di
 
 |  Propiedad |                                          Descripción                                          |  Ejemplo |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | Clave de fecha en la que se registró la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703 |
-| Pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123      |
+| dateKey   | Clave de fecha en la que se registró la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703 |
+| pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123      |
 | Correcto | Número de dispositivos únicos en estado correcto.                                                    | 12       |
-| Error     | Número de dispositivos únicos en estado de error.                                                      | 10       |
-| Failed    | Número de dispositivos únicos en estado con errores.                                                     | 2        |
+| error     | Número de dispositivos únicos en estado de error.                                                      | 10       |
+| con errores    | Número de dispositivos únicos en estado con errores.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 La entidad **DeviceConfigurationProfileUserActivity** muestra el número de usuarios con estado correcto, pendiente, con errores o de error al día. El número refleja los perfiles de configuración de dispositivos asignados a la entidad. Por ejemplo, si un usuario muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un usuario tiene dos perfiles asignados, uno en estado correcto y otro en estado de error, se cuenta el usuario en el estado de error. La entidad **DeviceConfigurationProfileUserActivity** muestra cuántos usuarios hay en cada estado en un día determinado de los últimos 30 días. 
 
 | Propiedad  | Descripción  | Ejemplo  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos.  | 20160703  |
-| Pending  | Número de usuarios únicos en estado pendiente.  | 123  |
+| dateKey  | Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro del perfil de configuración de dispositivos.  | 20160703  |
+| pending  | Número de usuarios únicos en estado pendiente.  | 123  |
 | Correcto  | Número de usuarios únicos en estado correcto.  | 12  |
-| Error  | Número de usuarios únicos en estado de error.  | 10  |
-| Failed  | Número de usuarios únicos en estado con errores.  | 2  |
+| error  | Número de usuarios únicos en estado de error.  | 10  |
+| con errores  | Número de usuarios únicos en estado con errores.  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Propiedad          |                                                                                      Descripción                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | Referencia a la tabla de fechas que indica el día.                                                                                                                                          |
-| DeviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente. Es una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune.                               |
-| DeviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
-| DeviceRegistrationStateKey | Clave del atributo de estado de registro para este dispositivo.                                                                                                                    |
-| OwnerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                  |
-| ManagementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
-| AzureADRegistered          | Si el dispositivo está registrado en Azure Active Directory.                                                                                                                             |
-| ComplianceStateKey         | Clave de ComplianceState.                                                                                                                                                            |
-| OSVersion                  | Versión del SO.                                                                                                                                                                          |
-| JailBroken                 | Si el dispositivo está liberado.                                                                                                                                         |
-| DeviceCategoryKey          | Clave del atributo de categoría de dispositivo para este dispositivo.                                                                                                                                    |
+| dateKey                    | Referencia a la tabla de fechas que indica el día.                                                                                                                                          |
+| deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente. Es una referencia a la tabla de dispositivos que contiene el identificador de dispositivo de Intune.                               |
+| deviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
+| deviceRegistrationStateKey | Clave del atributo de estado de registro para este dispositivo.                                                                                                                    |
+| ownerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                  |
+| managementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
+| azureADRegistered          | Si el dispositivo está registrado en Azure Active Directory.                                                                                                                             |
+| complianceStateKey         | Clave de ComplianceState.                                                                                                                                                            |
+| oSVersion                  | Versión del SO.                                                                                                                                                                          |
+| jailBroken                 | Si el dispositivo está liberado.                                                                                                                                         |
+| deviceCategoryKey          | Clave del atributo de categoría de dispositivo para este dispositivo.                                                                                                                                    |
 | physicalMemoryInBytes      | La memoria física en bytes.                                                                                                                                    |
 | totalStorageSpaceInBytes      | Capacidad de almacenamiento total en bytes.                                                                                                                                    |
 
@@ -205,56 +205,56 @@ La entidad **DeviceRegistrationState** representa el tipo de registro al que hac
 | deviceRegistrationStateID   | Identificador único del estado de registro.                                            |
 | deviceRegistrationStateKey  | Identificador único del estado de registro en el almacenamiento de datos. Clave suplente. |
 | deviceRegistrationStateName | Estado de registro.                                                                  |
-|    NotRegistered                     |    No registrado.                                                                                                                                                                  |
-|    Registrado                        |       Registrado                                                                                                                                                                   |
-|    Revocado                           |       El estado significa que el administrador de TI ha bloqueado al cliente y el cliente se puede desbloquear. Un dispositivo también puede encontrarse en estado revocado después de que se haya borrado o retirado.        |
-|    KeyConflict                       |    Conflicto de clave.                                                                                                                                                                    |
-|    ApprovalPending                   |    Pendiente de aprobación.                                                                                                                                                                |
-|    CertificateReset                  |    Certificado establecido.                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    No registrado y pendiente de inscripción.                                                                                                                                               |
-|    Unknown                           |    Estado desconocido.                                                                                                                                                                   |
+|    notRegistered                     |    No registrado.                                                                                                                                                                  |
+|    registrarse                        |       Registrado                                                                                                                                                                   |
+|    revoked                           |       El estado significa que el administrador de TI ha bloqueado al cliente y el cliente se puede desbloquear. Un dispositivo también puede encontrarse en estado revocado después de que se haya borrado o retirado.        |
+|    keyConflict                       |    Conflicto de clave.                                                                                                                                                                    |
+|    approvalPending                   |    Pendiente de aprobación.                                                                                                                                                                |
+|    certificateReset                  |    Certificado establecido.                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    No registrado y pendiente de inscripción.                                                                                                                                               |
+|    unknown                           |    Estado desconocido.                                                                                                                                                                   |
 
 ## <a name="devices"></a>dispositivos
 La entidad **device** muestra todos los dispositivos inscritos en administración y sus propiedades correspondientes.
 
 |          Propiedad          |                                                                                       Descripción                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente.                                                                                                               |
-| DeviceId                   | Identificador único del dispositivo.                                                                                                                                                     |
-| DeviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
-| DeviceTypeKey              | Clave del atributo de tipo de dispositivo de este dispositivo.                                                                                                                                    |
-| DeviceRegistrationState    | Clave del atributo de estado de registro de cliente de este dispositivo.                                                                                                                      |
-| OwnerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                    |
-| EnrolledDateTime           | Fecha y hora en que se inscribió este dispositivo.                                                                                                                                         |
+| deviceKey                  | Identificador único del dispositivo en el almacenamiento de datos. Clave suplente.                                                                                                               |
+| deviceId                   | Identificador único del dispositivo.                                                                                                                                                     |
+| deviceName                 | Nombre del dispositivo en plataformas que permiten asignar nombres a dispositivos. En otras plataformas, Intune crea un nombre a partir de otras propiedades. Este atributo no puede estar disponible para todos los dispositivos. |
+| deviceTypeKey              | Clave del atributo de tipo de dispositivo de este dispositivo.                                                                                                                                    |
+| deviceRegistrationState    | Clave del atributo de estado de registro de cliente de este dispositivo.                                                                                                                      |
+| ownerTypeKey               | Clave del atributo de tipo de propietario de este dispositivo: corporativo, personal o desconocido.                                                                                                    |
+| enrolledDateTime           | Fecha y hora en que se inscribió este dispositivo.                                                                                                                                         |
 | ethernetMacAddress           | Identificador de red único de este dispositivo.                                                                                                                                         |
-| LastSyncDateTime           | Última inserción conocida del dispositivo en el repositorio con Intune.                                                                                                                                              |
-| ManagementAgentKey         | Clave del agente de administración asociada a este dispositivo.                                                                                                                             |
-| ManagementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
-| AzureADDeviceId            | El valor de deviceID de Azure para este dispositivo.                                                                                                                                                  |
-| AzureADRegistered          | Si el dispositivo está registrados en Azure Active Directory.                                                                                                                             |
-| DeviceCategoryKey          | Clave de la categoría asociada a este dispositivo.                                                                                                                                     |
-| DeviceEnrollmentType       | Clave del tipo de inscripción asociada a este dispositivo, que indica el método de inscripción.                                                                                             |
-| ComplianceStateKey         | Clave del estado de cumplimiento de normas asociada a este dispositivo.                                                                                                                             |
+| lastSyncDateTime           | Última inserción conocida del dispositivo en el repositorio con Intune.                                                                                                                                              |
+| managementAgentKey         | Clave del agente de administración asociada a este dispositivo.                                                                                                                             |
+| managementStateKey         | Clave del estado de administración asociada a este dispositivo, que indica el estado más reciente de una acción remota o si estaba liberado o modificado.                                                |
+| azureADDeviceId            | El valor de deviceID de Azure para este dispositivo.                                                                                                                                                  |
+| azureADRegistered          | Si el dispositivo está registrados en Azure Active Directory.                                                                                                                             |
+| deviceCategoryKey          | Clave de la categoría asociada a este dispositivo.                                                                                                                                     |
+| deviceEnrollmentType       | Clave del tipo de inscripción asociada a este dispositivo, que indica el método de inscripción.                                                                                             |
+| complianceStateKey         | Clave del estado de cumplimiento de normas asociada a este dispositivo.                                                                                                                             |
 | office365Version           | Versión de Microsoft 365 instalada en el dispositivo.                                                                                                                             |
-| OSVersion                  | Versión del sistema operativo del dispositivo.                                                                                                                                                |
-| EasDeviceId                | Identificador de Exchange ActiveSync del dispositivo.                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | Identificador único para el usuario asociado al dispositivo.                                                                                                                           |
-| RowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se modificó por última vez este dispositivo en el almacenamiento de datos.                                                                                                       |
-| Fabricante               | Fabricante del dispositivo.                                                                                                                                                             |
-| Modelo                      | Modelo del dispositivo.                                                                                                                                                                    |
-| OperatingSystem            | Sistema operativo del dispositivo. Windows, iOS/iPadOS,   etc.                                                                                                                                   |
-| IsDeleted                  | Archivo binario para mostrar si el dispositivo se ha eliminado o no.                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Nivel de revisión de seguridad de Android                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| oSVersion                  | Versión del sistema operativo del dispositivo.                                                                                                                                                |
+| easDeviceId                | Identificador de Exchange ActiveSync del dispositivo.                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | Identificador único para el usuario asociado al dispositivo.                                                                                                                           |
+| rowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se modificó por última vez este dispositivo en el almacenamiento de datos.                                                                                                       |
+| fabricante               | Fabricante del dispositivo.                                                                                                                                                             |
+| modelo                      | Modelo del dispositivo.                                                                                                                                                                    |
+| operatingSystem            | Sistema operativo del dispositivo. Windows, iOS/iPadOS,   etc.                                                                                                                                   |
+| isDeleted                  | Archivo binario para mostrar si el dispositivo se ha eliminado o no.                                                                                                                                 |
+| androidSecurityPatchLevel  | Nivel de revisión de seguridad de Android                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | IsSupervised               | Estado del dispositivo supervisado                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Almacenamiento libre en bytes.                                                                                                                                                                 |
-| EncryptionState            | Estado de cifrado en el dispositivo                                                                                                                                                      |
-| SubscriberCarrier          | Operador del suscriptor del dispositivo                                                                                                                                                       |
-| PhoneNumber                | Número de teléfono del dispositivo                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Tecnología de datos móviles del dispositivo.                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | Almacenamiento libre en bytes.                                                                                                                                                                 |
+| encryptionState            | Estado de cifrado en el dispositivo                                                                                                                                                      |
+| subscriberCarrier          | Operador del suscriptor del dispositivo                                                                                                                                                       |
+| phoneNumber                | Número de teléfono del dispositivo                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | Tecnología de datos móviles del dispositivo.                                                                                                                                                    |
+| wiFiMacAddress             | Wi-Fi MAC.                                                                                                                                                                              |
 | windowsOsEdition             | Edición de sistema operativo Windows.                                                                                                                                                                              |
 
 
@@ -263,9 +263,9 @@ La entidad **deviceType** representa el tipo de dispositivo al que hacen referen
 
 |    Propiedad    |                                  Descripción                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | Identificador único del tipo de dispositivo                                       |
-| DeviceTypeKey  | Identificador único del tipo de dispositivo en el almacenamiento de datos. Clave suplente. |
-| DeviceTypeName | Tipo de dispositivo                                                                |
+| deviceTypeID   | Identificador único del tipo de dispositivo                                       |
+| deviceTypeKey  | Identificador único del tipo de dispositivo en el almacenamiento de datos. Clave suplente. |
+| deviceTypeName | Tipo de dispositivo                                                                |
 
 ### <a name="example"></a>Ejemplo
 
@@ -412,27 +412,27 @@ La entidad **EnrollmentFailureReason** indica un motivo más detallado para el e
 
 |       Propiedad      |                          Descripción                          | Ejemplo |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | Identificador único de la fecha.                                | 123     |
-| TenantKey           | Identificador único del inquilino.                              | 456     |
-| DeviceKey           | Identificador único del dispositivo.                              | 789     |
-| ExtensionVersionKey | Identificador único de la versión de IntuneManagementExtension. | 1       |
-| ExtensionStateKey   | Identificador único del estado de mantenimiento.                            | 2       |
+| dateKey             | Identificador único de la fecha.                                | 123     |
+| tenantKey           | Identificador único del inquilino.                              | 456     |
+| deviceKey           | Identificador único del dispositivo.                              | 789     |
+| extensionVersionKey | Identificador único de la versión de IntuneManagementExtension. | 1       |
+| extensionStateKey   | Identificador único del estado de mantenimiento.                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 **IntuneManagementExtensionHealthState** muestra todos los estados de mantenimiento posibles de **IntuneManagementExtension**.
 
 |      Propiedad     |                   Descripción                  | Ejemplo |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | Identificador único del estado de mantenimiento.           | 2       |
-| ExtensionState    | Estado de mantenimiento de una entidad IntuneManagementExtension. | Correcto |
+| extensionStateKey | Identificador único del estado de mantenimiento.           | 2       |
+| extensionState    | Estado de mantenimiento de una entidad IntuneManagementExtension. | Correcto |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 La entidad **IntuneManagementExtensionVersion** muestra todas las versiones usadas por **IntuneManagementExtension**.
 
 |       Propiedad      |                          Descripción                          | Ejemplo |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | Identificador único de la versión de IntuneManagementExtension. | 1       |
-| ExtensionVersion    | Número de versión de 4 dígitos.                                   | 1.0.2.0 |
+| extensionVersionKey | Identificador único de la versión de IntuneManagementExtension. | 1       |
+| extensionVersion    | Número de versión de 4 dígitos.                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -443,10 +443,10 @@ La entidad **MamApplication** muestra las aplicaciones de línea de negocio (LOB
 | mamApplicationKey |Identificador único de la aplicación MAM. | 432 |
 | mamApplicationName |Nombre de la aplicación MAM. |Nombre de ejemplo de la aplicación MAM |
 | mamApplicationId |Identificador de la aplicación MAM. | 123 |
-| IsDeleted |Indica si se ha actualizado el registro de la aplicación MAM. <br>True: la aplicación MAM tiene un nuevo registro con campos actualizados en esta tabla. <br>False: registro más reciente de esta aplicación MAM. |Verdadero/Falso |
-| StartDateInclusiveUTC |Fecha y hora en formato UTC en que se ha creado esta aplicación MAM en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
-| DeletedDateUTC |Fecha y hora en formato UTC en que IsDeleted ha cambiado a True. |23/11/2016 12:00:00 AM |
-| RowLastModifiedDateTimeUTC |Fecha y hora en formato UTC en que se ha modificado por última vez esta aplicación MAM en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
+| isDeleted |Indica si se ha actualizado el registro de la aplicación MAM. <br>True: la aplicación MAM tiene un nuevo registro con campos actualizados en esta tabla. <br>False: registro más reciente de esta aplicación MAM. |Verdadero/Falso |
+| startDateInclusiveUTC |Fecha y hora en formato UTC en que se ha creado esta aplicación MAM en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
+| deletedDateUTC |Fecha y hora en formato UTC en que IsDeleted ha cambiado a True. |23/11/2016 12:00:00 AM |
+| rowLastModifiedDateTimeUTC |Fecha y hora en formato UTC en que se ha modificado por última vez esta aplicación MAM en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ La entidad **MamApplicationInstance** muestra las aplicaciones de administració
 
 |          Propiedad          |                                                                                                  Descripción                                                                                                  |               Ejemplo                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               Identificador único de la instancia de la aplicación MAM en el almacenamiento de datos. Clave suplente.                                                                |                 123                  |
-|           UserId           |                                                                              Identificador del usuario que tiene instalada esta aplicación MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              Identificador único de la instancia de la aplicación MAM. Se parece a ApplicationInstanceKey, pero el identificador es una clave natural.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceKey   |                                                               Identificador único de la instancia de la aplicación MAM en el almacenamiento de datos. Clave suplente.                                                                |                 123                  |
+|           userId           |                                                                              Identificador del usuario que tiene instalada esta aplicación MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              Identificador único de la instancia de la aplicación MAM. Se parece a ApplicationInstanceKey, pero el identificador es una clave natural.                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | Identificador de la aplicación MAM para la que se creó esta instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
-|     ApplicationVersion     |                                                                                     Versión de esta aplicación MAM.                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 Fecha en la que se ha creado este registro de la instancia de la aplicación MAM. El valor puede ser NULL.                                                                 |        23/11/2016 12:00:00 AM        |
-|          Plataforma          |                                                                          Plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      Versión de la plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                       |                 2.2                  |
-|         SdkVersion         |                                                                            Versión de SDK de MAM con la que se ha encapsulado esta aplicación MAM.                                                                            |                 3.2                  |
+|     applicationVersion     |                                                                                     Versión de esta aplicación MAM.                                                                                      |                  2                   |
+|        createdDate         |                                                                 Fecha en la que se ha creado este registro de la instancia de la aplicación MAM. El valor puede ser NULL.                                                                 |        23/11/2016 12:00:00 AM        |
+|          platform          |                                                                          Plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                           |                  2                   |
+|      platformVersion       |                                                                      Versión de la plataforma del dispositivo en el que está instalada esta aplicación MAM.                                                                       |                 2.2                  |
+|         sdkVersion         |                                                                            Versión de SDK de MAM con la que se ha encapsulado esta aplicación MAM.                                                                            |                 3.2                  |
 | mamDeviceId | Identificador de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
 | mamDeviceType | Tipo de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
 | mamDeviceName | Nombre de dispositivo al que está asociada la instancia de la aplicación MAM.   | 23/11/2016 12:00:00 AM   |
-|         IsDeleted          | Indica si se ha actualizado el registro de la instancia de esta aplicación MAM. <br>True: la instancia de esta aplicación MAM tiene un nuevo registro con campos actualizados en esta tabla. <br>False: registro más reciente de la instancia de esta aplicación MAM. |              Verdadero/Falso              |
-|   StartDateInclusiveUtc    |                                                              Fecha y hora en formato UTC en que se ha creado la instancia de esta aplicación MAM en el almacenamiento de datos.                                                               |        23/11/2016 12:00:00 AM        |
-|       DeletedDateUtc       |                                                                             Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                                                              |        23/11/2016 12:00:00 AM        |
-| RowLastModifiedDateTimeUtc |                                                           Fecha y hora en formato UTC en que se ha modificado por última vez la instancia de esta aplicación MAM en el almacenamiento de datos.                                                            |        23/11/2016 12:00:00 AM        |
+|         isDeleted          | Indica si se ha actualizado el registro de la instancia de esta aplicación MAM. <br>True: la instancia de esta aplicación MAM tiene un nuevo registro con campos actualizados en esta tabla. <br>False: registro más reciente de la instancia de esta aplicación MAM. |              Verdadero/Falso              |
+|   startDateInclusiveUtc    |                                                              Fecha y hora en formato UTC en que se ha creado la instancia de esta aplicación MAM en el almacenamiento de datos.                                                               |        23/11/2016 12:00:00 AM        |
+|       deletedDateUtc       |                                                                             Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                                                              |        23/11/2016 12:00:00 AM        |
+| rowLastModifiedDateTimeUtc |                                                           Fecha y hora en formato UTC en que se ha modificado por última vez la instancia de esta aplicación MAM en el almacenamiento de datos.                                                            |        23/11/2016 12:00:00 AM        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ La entidad **MamCheckin** representa los datos recopilados cuando una instancia 
 
 | Propiedad | Descripción | Ejemplo |
 |---------|------------|--------|
-| DateKey |Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro de la aplicación MAM. | 20160703 |
-| ApplicationInstanceKey |Clave de la instancia de la aplicación asociada a este registro de la aplicación MAM. | 123 |
-| UserKey |Clave del usuario asociado a este registro de la aplicación MAM. | 4323 |
+| dateKey |Clave de fecha en la que se ha anotado en el almacenamiento de datos el registro de la aplicación MAM. | 20160703 |
+| applicationInstanceKey |Clave de la instancia de la aplicación asociada a este registro de la aplicación MAM. | 123 |
+| userKey |Clave del usuario asociado a este registro de la aplicación MAM. | 4323 |
 | mamApplicationKey |Clave de aplicación asociada con el registro de la aplicación MAM. | 432 |
-| DeviceHealthKey |Clave de DeviceHealth asociada a este registro de la aplicación MAM. | 321 |
-| PlatformKey |Representa la plataforma del dispositivo asociado a este registro de la aplicación MAM. |123 |
-| LastCheckInDate |Fecha y hora en que se ha registrado por última vez esta aplicación MAM. El valor puede ser NULL. |23/11/2016 12:00:00 AM |
+| deviceHealthKey |Clave de DeviceHealth asociada a este registro de la aplicación MAM. | 321 |
+| platformKey |Representa la plataforma del dispositivo asociado a este registro de la aplicación MAM. |123 |
+| lastCheckInDate |Fecha y hora en que se ha registrado por última vez esta aplicación MAM. El valor puede ser NULL. |23/11/2016 12:00:00 AM |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ La entidad **MamDeviceHealth** representa los dispositivos que tienen implementa
 
 | Propiedad | Descripción | Ejemplo |
 |---------|------------|--------|
-| DeviceHealthKey |Identificador único del dispositivo y su mantenimiento asociado en el almacenamiento de datos. Clave suplente. |123 |
-| DeviceHealth |Identificador único del dispositivo y su mantenimiento asociado. Es parecido a DeviceHealthKey, pero el identificador es una clave natural. |b66bc706-ffff-7777-0340-032819502773 |
-| DeviceHealthName |Representa el estado del dispositivo. <br>No disponible: no hay información sobre este dispositivo. <br>Correcto: el dispositivo no está liberado. <br>Incorrecto: el dispositivo está liberado. |No disponible Correcto Incorrecto |
-| RowLastModifiedDateTimeUtc |Fecha y hora en formato UTC en que se ha modificado por última vez el estado del dispositivo MAM específico en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
+| deviceHealthKey |Identificador único del dispositivo y su mantenimiento asociado en el almacenamiento de datos. Clave suplente. |123 |
+| deviceHealth |Identificador único del dispositivo y su mantenimiento asociado. Es parecido a DeviceHealthKey, pero el identificador es una clave natural. |b66bc706-ffff-7777-0340-032819502773 |
+| deviceHealthName |Representa el estado del dispositivo. <br>No disponible: no hay información sobre este dispositivo. <br>Correcto: el dispositivo no está liberado. <br>Incorrecto: el dispositivo está liberado. |No disponible Correcto Incorrecto |
+| rowLastModifiedDateTimeUtc |Fecha y hora en formato UTC en que se ha modificado por última vez el estado del dispositivo MAM específico en el almacenamiento de datos. |23/11/2016 12:00:00 AM |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ La entidad **MamPlatform** muestra nombres y tipos de plataforma en los que se h
 
 |          Propiedad          |                                    Descripción                                    |                         Ejemplo                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     Identificador único de la plataforma en el almacenamiento de datos. Clave suplente.      |                           123                           |
-|          Plataforma          | Identificador único de la plataforma. Se parece a PlatformKey, pero es una clave natural. |                           123                           |
-|        PlatformName        |                                   Nombre de la plataforma.                                   | No disponible <br>Ninguno <br>Windows <br>IOS <br>Android. |
-| RowLastModifiedDateTimeUtc | Fecha y hora en formato UTC en que se ha modificado por última vez esta plataforma en el almacenamiento de datos.  |                 23/11/2016 12:00:00 AM                  |
+|        platformKey         |     Identificador único de la plataforma en el almacenamiento de datos. Clave suplente.      |                           123                           |
+|          platform          | Identificador único de la plataforma. Se parece a PlatformKey, pero es una clave natural. |                           123                           |
+|        platformName        |                                   Nombre de la plataforma.                                   | No disponible <br>Ninguno <br>Windows <br>IOS <br>Android. |
+| rowLastModifiedDateTimeUtc | Fecha y hora en formato UTC en que se ha modificado por última vez esta plataforma en el almacenamiento de datos.  |                 23/11/2016 12:00:00 AM                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 La entidad **managementAgentTypes** representa los agentes usados para administrar un dispositivo.
 
 |         Propiedad        |                                       Descripción                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | Identificador único del tipo de agente de administración.                                         |
-| ManagementAgentTypeKey  | Identificador único del tipo de agente de administración en el almacenamiento de datos. Clave suplente. |
-| ManagementAgentTypeName | Indica qué tipo de agente se usa para administrar el dispositivo.                              |
+| managementAgentTypeID   | Identificador único del tipo de agente de administración.                                         |
+| managementAgentTypeKey  | Identificador único del tipo de agente de administración en el almacenamiento de datos. Clave suplente. |
+| managementAgentTypeName | Indica qué tipo de agente se usa para administrar el dispositivo.                              |
 
 ### <a name="example"></a>Ejemplo
 
@@ -569,21 +569,21 @@ La entidad MobileAppInstallState representa el estado de instalación de una apl
 
 |       Propiedad      |                        Descripción                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | El identificador único del estado de instalación de aplicación de su cuenta. |
-| AppInstallState     | Valor de enumeración del estado de instalación de aplicación.                     |
-| AppInstallStateName | Nombre del estado de instalación de aplicación.                           |
+| appInstallStateKey  | El identificador único del estado de instalación de aplicación de su cuenta. |
+| appInstallState     | Valor de enumeración del estado de instalación de aplicación.                     |
+| appInstallStateName | Nombre del estado de instalación de aplicación.                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Representa el estado de instalación de una aplicación móvil para un tipo de dispositivo de destino dado mediante la administración de aplicaciones móviles con Microsoft Intune.
 
 |      Propiedad      |                                                          Descripción                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | Clave de la fecha en la que se registró el estado de instalación de la aplicación.                                                                     |
-| AppKey             | Clave de la aplicación móvil usada para identificar una instancia de AppRevision.                                                          |
-| DeviceTypeKey      | Clave del tipo de dispositivo asociada a la aplicación móvil.                                                              |
-| AppInstallStateKey | Clave del estado de instalación de la aplicación usada para identificar una instancia de MobileAppInstallState.                                         |
-| ErrorCode          | El código de error devuelto por el instalador de la aplicación, la plataforma móvil o el servicio referente a la instalación de la aplicación. |
-| Número              | Número total.                                                                                                                  |
+| dateKey            | Clave de la fecha en la que se registró el estado de instalación de la aplicación.                                                                     |
+| appKey             | Clave de la aplicación móvil usada para identificar una instancia de AppRevision.                                                          |
+| deviceTypeKey      | Clave del tipo de dispositivo asociada a la aplicación móvil.                                                              |
+| appInstallStateKey | Clave del estado de instalación de la aplicación usada para identificar una instancia de MobileAppInstallState.                                         |
+| errorCode          | El código de error devuelto por el instalador de la aplicación, la plataforma móvil o el servicio referente a la instalación de la aplicación. |
+| count              | Número total.                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 La entidad **ownerType** indica si un dispositivo es corporativo, personal o desconocido.
@@ -602,67 +602,67 @@ La entidad **Policy** muestra los perfiles de configuración de dispositivos, lo
 
 |          Propiedad          |                                                                       Descripción                                                                      |                Ejemplo               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | Clave única para representar la directiva en el almacenamiento de datos.                                                                                              | 123                                  |
-| PolicyId                   | Identificador único de la directiva en el almacenamiento de datos.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | Nombre de la directiva.                                                                                                                                    | "Línea base de Windows 10"                |
-| PolicyVersion              | Versión de la directiva. Cuando la directiva se modifica o se cambia, se crea una versión más reciente.                                                             | 1, 2, 3                              |
-| IsDeleted                  | Indica si se ha actualizado el registro de la directiva.  True: la directiva tiene un nuevo registro con campos actualizados.  False: registro más reciente de la directiva. | Verdadero/Falso                           |
-| StartDateInclusiveUTC      | Fecha y hora en formato UTC en que se ha creado la directiva en el almacenamiento de datos.                                                                              | 23/11/2016 0:00                      |
-| DeletedDateUTC             | Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                                                                                   | 23/11/2016 0:00                      |
-| RowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se ha modificado por última vez la directiva en el almacenamiento de datos.                                                                        | 23/11/2016 0:00                      |
+| policyKey                  | Clave única para representar la directiva en el almacenamiento de datos.                                                                                              | 123                                  |
+| policyId                   | Identificador único de la directiva en el almacenamiento de datos.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | Nombre de la directiva.                                                                                                                                    | "Línea base de Windows 10"                |
+| policyVersion              | Versión de la directiva. Cuando la directiva se modifica o se cambia, se crea una versión más reciente.                                                             | 1, 2, 3                              |
+| isDeleted                  | Indica si se ha actualizado el registro de la directiva.  True: la directiva tiene un nuevo registro con campos actualizados.  False: registro más reciente de la directiva. | Verdadero/Falso                           |
+| startDateInclusiveUTC      | Fecha y hora en formato UTC en que se ha creado la directiva en el almacenamiento de datos.                                                                              | 23/11/2016 0:00                      |
+| deletedDateUTC             | Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                                                                                   | 23/11/2016 0:00                      |
+| rowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se ha modificado por última vez la directiva en el almacenamiento de datos.                                                                        | 23/11/2016 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 La tabla siguiente muestra el número de dispositivos en estado correcto, pendiente, con errores o de error al día. El número refleja los datos por perfiles de tipo de directiva. Por ejemplo, si un dispositivo muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un dispositivo tiene dos perfiles asignados, uno con el estado correcto y otro con el estado de error, la entidad aumenta el contador de éxitos y coloca el dispositivo en el estado de error. La entidad **policyDeviceActivity** muestra cuántos dispositivos hay en cada estado en un día determinado de los últimos 30 días.
 
 |  Propiedad |                                           Descripción                                           |        Ejemplo        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | Clave de fecha en la que se ha registrado la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703              |
-| Pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123                   |
+| dateKey   | Clave de fecha en la que se ha registrado la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703              |
+| pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123                   |
 | Correcto | Número de dispositivos únicos en estado correcto.                                                    | 12                    |
-| PolicyKey | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                  | Línea base de Windows 10 |
-| Error     | Número de dispositivos únicos en estado de error.                                                      | 10                    |
-| Failed    | Número de dispositivos únicos en estado incorrecto.                                                     | 2                     |
+| policyKey | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                  | Línea base de Windows 10 |
+| error     | Número de dispositivos únicos en estado de error.                                                      | 10                    |
+| con errores    | Número de dispositivos únicos en estado incorrecto.                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Propiedad        |                      Descripción                      |     Ejemplo    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | Clave única del tipo de plataforma de directivas.        | 20170519       |
-| PolicyPlatformTypeId   | Identificador único del tipo de plataforma de directivas. | 1              |
-| PolicyPlatformTypeName | Nombre del tipo de plataforma de directivas.              | AndroidForWork |
+| policyPlatformTypeKey  | Clave única del tipo de plataforma de directivas.        | 20170519       |
+| policyPlatformTypeId   | Identificador único del tipo de plataforma de directivas. | 1              |
+| policyPlatformTypeName | Nombre del tipo de plataforma de directivas.              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 La entidad **PolicyTypeActivity** muestra el número acumulado de dispositivos con estado correcto, estado pendiente, estado con errores o estado de error. Muestra estos estados con respecto a un perfil de configuración de dispositivos, un perfil de configuración de aplicaciones o una directiva de cumplimiento por día.
 
 |    Propiedad   |                                          Descripción                                          |           Ejemplo           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | Clave de fecha en la que se ha registrado la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703                    |
-| PolicyKey     | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                | Línea base de Windows 10         |
-| PolicyTypeKey | Tipo de clave de directiva, que puede combinarse con el tipo de directiva para obtener el nombre del tipo de directiva.             | Directiva de cumplimiento de Windows 10 |
-| Pending       | Número de dispositivos únicos en estado pendiente.                                                    | 123                         |
+| dateKey       | Clave de fecha en la que se ha registrado la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703                    |
+| policyKey     | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                | Línea base de Windows 10         |
+| policyTypeKey | Tipo de clave de directiva, que puede combinarse con el tipo de directiva para obtener el nombre del tipo de directiva.             | Directiva de cumplimiento de Windows 10 |
+| pending       | Número de dispositivos únicos en estado pendiente.                                                    | 123                         |
 | Correcto     | Número de dispositivos únicos en estado correcto.                                                    | 12                          |
-| Error         | Número de dispositivos únicos en estado de error.                                                      | 10                          |
-| Failed        | Número de dispositivos únicos en estado con errores.                                                     | 2                           |
+| error         | Número de dispositivos únicos en estado de error.                                                      | 10                          |
+| con errores        | Número de dispositivos únicos en estado con errores.                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 La entidad **PolicyType** muestra los tipos de perfiles de configuración de dispositivos, perfiles de configuración de aplicaciones y directivas de cumplimiento. Puede asignar las directivas con Administración de dispositivos móviles (MDM) a un grupo de la empresa.
 
 |    Propiedad    |                       Descripción                      |            Ejemplo            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | Identificador único de la directiva en el sistema de origen.  | 123                           |
-| PolicyTypeKey  | Identificador único de la directiva en el almacenamiento de datos. | 1                             |
-| PolicyTypeName | Nombre del tipo de directiva.                               | Directiva de cumplimiento de Windows 10. |
+| policyTypeId   | Identificador único de la directiva en el sistema de origen.  | 123                           |
+| policyTypeKey  | Identificador único de la directiva en el almacenamiento de datos. | 1                             |
+| policyTypeName | Nombre del tipo de directiva.                               | Directiva de cumplimiento de Windows 10. |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 La tabla siguiente muestra el número de usuarios en estado correcto, pendiente, con errores o de error al día. El número refleja los datos por perfiles de tipo de directiva. Por ejemplo, si un usuario muestra el estado correcto para todas las directivas que tiene asignadas, aumenta en uno el contador de éxitos de ese día. Si un usuario tiene dos perfiles asignados, uno en estado correcto y otro en estado de error, se cuenta el usuario en el estado de error. La entidad **PolicyUserActivity** muestra cuántos usuarios hay en cada estado en un día determinado de los últimos 30 días.
 
 |  Propiedad |                                          Descripción                                          |       Ejemplo       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | Clave de fecha en la que se registró la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703            |
-| Pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123                 |
+| dateKey   | Clave de fecha en la que se registró la inserción en el repositorio del perfil de configuración de dispositivos en el almacenamiento de datos. | 20160703            |
+| pending   | Número de dispositivos únicos en estado pendiente.                                                    | 123                 |
 | Correcto | Número de dispositivos únicos en estado correcto.                                                    | 12                  |
-| PolicyKey | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                | Línea base de Windows 10 |
-| Error     | Número de dispositivos únicos en estado de error.                                                      | 10                  |
+| policyKey | Clave de la directiva, que puede combinarse con la directiva para obtener el nombre de la directiva.                                | Línea base de Windows 10 |
+| error     | Número de dispositivos únicos en estado de error.                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 Una entidad **termsAndConditions** representa los metadatos y el contenido de una determinada directiva de términos y condiciones (T&C). El contenido de las directivas T&C se presenta a los usuarios tras su primer intento de inscribirse en Intune y posteriormente tras las ediciones en las que un administrador ha solicitado aceptación. Permite a los administradores comunicar las disposiciones con las que debe estar de acuerdo un usuario para tener dispositivos inscritos en Intune.
@@ -686,11 +686,11 @@ La entidad **UserDeviceAssociation** contiene las asociaciones de dispositivos d
 
 |        Nombre        |                                             Descripción                                            |     Ejemplo     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | Identificador único del usuario en el almacenamiento de datos.   (Clave suplente).                            | 123             |
-| DeviceKey          | Identificador único del dispositivo en el almacenamiento de datos.                                             | 123             |
-| CreatedDateTimeUTC | Fecha y hora de creación de la asociación de dispositivos de usuario. Utiliza el formato UTC.                     | 23/11/2016 0:00 |
-| IsDeleted          | Indica que el usuario ha anulado la inscripción del dispositivo y que la asociación ya no está activa. | Verdadero/Falso      |
-| EndedDateTimeUTC   | Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                               | 23/6/2017 0:00  |
+| userKey            | Identificador único del usuario en el almacenamiento de datos.   (Clave suplente).                            | 123             |
+| deviceKey          | Identificador único del dispositivo en el almacenamiento de datos.                                             | 123             |
+| createdDateTimeUTC | Fecha y hora de creación de la asociación de dispositivos de usuario. Utiliza el formato UTC.                     | 23/11/2016 0:00 |
+| isDeleted          | Indica que el usuario ha anulado la inscripción del dispositivo y que la asociación ya no está activa. | Verdadero/Falso      |
+| endedDateTimeUTC   | Fecha y hora en formato UTC en que IsDeleted ha cambiado a True.                                               | 23/6/2017 0:00  |
 
 ## <a name="users"></a>usuarios
 La entidad **user** muestra todos los usuarios de Azure Active Directory (Azure AD) con licencias asignadas en la empresa.
@@ -699,14 +699,14 @@ La colección de entidades **user** contiene los datos de usuario. Dichos regist
 
 |          Propiedad          |                                                                                                           Descripción                                                                                                          |                Ejemplo               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | Identificador único del usuario en el almacenamiento de datos. Clave suplente.                                                                                                                                                         | 123                                  |
-| UserId                     | Identificador único del usuario. Se parece a UserKey, pero es una clave natural.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | Dirección de correo electrónico del usuario.                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | Identificador único del usuario en el almacenamiento de datos. Clave suplente.                                                                                                                                                         | 123                                  |
+| userId                     | Identificador único del usuario. Se parece a UserKey, pero es una clave natural.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | Dirección de correo electrónico del usuario.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | Nombre principal del usuario.                                                                                                                                                                                               | John@constoso.com                    |
 | DisplayName                | Nombre para mostrar del usuario.                                                                                                                                                                                                      | Juan                                 |
-| IntuneLicensed             | Especifica si este usuario tiene licencia de Intune o no.                                                                                                                                                                              | Verdadero/Falso                           |
-| IsDeleted                  | Indica si todas las licencias del usuario expiraron y si, por lo tanto, el usuario se quitó de Intune. Esta marca no cambia si se trata de un solo registro. En su lugar, se crea un registro para un estado de usuario nuevo. | Verdadero/Falso                           |
-| RowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se modificó por última vez el registro en el almacenamiento de datos                                                                                                                                                 | 23/11/2016 0:00                      |
+| intuneLicensed             | Especifica si este usuario tiene licencia de Intune o no.                                                                                                                                                                              | Verdadero/Falso                           |
+| isDeleted                  | Indica si todas las licencias del usuario expiraron y si, por lo tanto, el usuario se quitó de Intune. Esta marca no cambia si se trata de un solo registro. En su lugar, se crea un registro para un estado de usuario nuevo. | Verdadero/Falso                           |
+| rowLastModifiedDateTimeUTC | Fecha y hora en formato UTC en que se modificó por última vez el registro en el almacenamiento de datos                                                                                                                                                 | 23/11/2016 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 Una entidad **userTermsAndConditionsAcceptance** representa el estado de aceptación de una determinada directiva de términos y condiciones (T&C) por un usuario determinado. Los usuarios deben aceptar la versión más actualizada de los términos para conservar el acceso al Portal de empresa.
@@ -724,9 +724,9 @@ La entidad **vppProgramTypes** muestra los posibles tipos de programa VPP para u
 
 |      Propiedad      |          Descripción         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | Identificador del tipo.           |
-| VppProgramTypeKey  | Clave suplente de la clave. |
-| VppProgramTypeName | Tipo de programa VPP.          |
+| vppProgramTypeID   | Identificador del tipo.           |
+| vppProgramTypeKey  | Clave suplente de la clave. |
+| vppProgramTypeName | Tipo de programa VPP.          |
 
 ### <a name="example"></a>Ejemplo
 

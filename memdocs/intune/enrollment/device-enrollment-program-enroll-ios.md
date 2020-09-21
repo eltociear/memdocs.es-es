@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907303"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574888"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Inscripción automática de dispositivos iOS/iPadOS con la Inscripción de dispositivos automatizada de Apple
 
@@ -226,8 +226,7 @@ Ahora que ha instalado el token, puede crear un perfil de inscripción para disp
 
 14. Si selecciona **Permitir Apple Configurator mediante certificado** en el paso anterior, elija un certificado de Apple Configurator para importarlo.
 
-15. Puede especificar un formato de nombres para los dispositivos que se aplique automáticamente cuando se inscriban y en cada protección sucesiva. Para crear una plantilla de nombres, seleccione **Sí** en **Aplicar plantilla de nombre de dispositivo**. A continuación, en el cuadro **Device Name Template** (Plantilla de nombre de dispositivo), escriba la plantilla que se usará para los nombres que usan este perfil. Puede especificar un formato de plantilla que incluya el tipo de dispositivo y el número de serie. 
-
+15. Puede especificar un formato de nombres para los dispositivos que se aplique automáticamente cuando se inscriban y en cada protección sucesiva. Para crear una plantilla de nombres, seleccione **Sí** en **Aplicar plantilla de nombre de dispositivo**. A continuación, en el cuadro **Device Name Template** (Plantilla de nombre de dispositivo), escriba la plantilla que se usará para los nombres que usan este perfil. Puede especificar un formato de plantilla que incluya el tipo de dispositivo y el número de serie. La plantilla de nombre del dispositivo incluye compatibilidad con iPhone, iPad y iPod Touch. 
 16. Seleccione **Siguiente: Personalización del Asistente de configuración**.
 
 17. En la página **Personalización del Asistente de configuración**, configure la siguiente configuración de perfil: ![Personalización del Asistente de configuración.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
