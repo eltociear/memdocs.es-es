@@ -1,11 +1,11 @@
 - name: Configuración de las opciones de dispositivo
   href: index.yml
-- name: Introducción
+- name: Información general
   expanded: true
   items:
     - name: Información general sobre la configuración de dispositivo
       href: device-profiles.md
-- name: Guías de inicios rápidos
+- name: Guías de inicio rápido
   items:
     - name: Crear un perfil de dispositivo de correo
       href: quickstart-email-profile.md
@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: Solución de problemas de Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
-    - name: Plantillas administrativas
-      displayName: 'admx, gpo, group policy'
+    - name: Plantillas administrativas y directiva de grupo
+      displayName: 'admx, gpo'
       items:
+        - name: Análisis de directiva de grupo
+          href: group-policy-analytics.md
         - name: Crear plantillas administrativas
           href: administrative-templates-windows.md
         - name: Actualización de Office mediante las plantillas administrativas

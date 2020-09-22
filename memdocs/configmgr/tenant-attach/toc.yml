@@ -12,6 +12,8 @@
       href: timeline.md
     - name: Explorador de recursos (vista previa)
       href: resource-explorer.md
+    - name: Ejecución de scripts (versión preliminar)
+      href: scripts.md
 - name: CMPivot para dispositivos conectados al inquilino (versión preliminar)
   items:
     - name: Iniciar CMPivot (vista previa)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: "Configuración para una directiva de Antivirus de Microsoft\_Defender"
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Referencia
+  items:
+    - name: Recopilación de datos de asociación de inquilinos
+      href: data-collection.md
 - name: Solución de problemas
   items:
     - name: Asociación de inquilinos y acciones de dispositivo
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: Explorador de recursos (vista previa)
       href: troubleshoot-resource-explorer.md
+    - name: Ejecución de scripts (versión preliminar)
+      href: troubleshoot-scripts.md
     - name: CMPivot (vista previa)
       href: troubleshoot-cmpivot.md

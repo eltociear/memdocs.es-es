@@ -1,6 +1,6 @@
 - name: Aspectos básicos de Microsoft Intune
   href: index.yml
-- name: Introducción
+- name: Información general
   expanded: true
   items:
     - name: Introducción a Microsoft Intune
@@ -217,6 +217,8 @@
       items:
         - name: Informes de Intune
           href: reports.md
+        - name: Exportación de informes mediante Graph
+          href: reports-export-graph-apis.md
         - name: Registros de auditoría para actividades de Intune
           href: monitor-audit-logs.md
         - name: Revisión de registros con Azure Monitor

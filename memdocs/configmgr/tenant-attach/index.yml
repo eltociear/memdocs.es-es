@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067994"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802829"
 landingContent:
 - title: Acerca de la asociación de inquilinos
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Habilitación de la asociación de inquilinos
       url: device-sync-actions.md
-    - text: Ver detalles de cliente de ConfigMgr (versión preliminar)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: Solución de problemas de asociación de inquilinos y acciones de dispositivo
       url: troubleshoot.md
     - text: Detalles de solución de problemas de cliente de ConfigMgr (versión preliminar)
       url: troubleshoot-client-details.md
+- title: Obtención de información sobre los dispositivos cargados
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ver detalles de cliente de ConfigMgr (versión preliminar)
+      url: client-details.md
+    - text: Escala de tiempo del dispositivo (vista previa)
+      url: timeline.md
+    - text: Explorador de recursos (vista previa)
+      url: resource-explorer.md
+- title: Principales tareas
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ejecutar scripts
+      url: scripts.md
+    - text: Instalar aplicaciones
+      url: applications.md
+    - text: Inicio de CMPivot
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: Información general del uso de CMPivot
+      url: cmpivot-overview-attached.md
+    - text: Scripts de ejemplo de CMPivot
+      url: cmpivot-samples-attached.md
