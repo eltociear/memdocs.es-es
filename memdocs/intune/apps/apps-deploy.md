@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443822"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008182"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Asignación de aplicaciones a grupos con Microsoft Intune
 
@@ -64,7 +64,7 @@ En esta tabla se muestran las diversas opciones para asignar aplicaciones a usua
    - **Disponible para dispositivos inscritos**: se asigna la aplicación a grupos de usuarios que pueden instalar la aplicación desde la aplicación o el sitio web Portal de empresa.
    - **Disponible con o sin inscripción**: se asigna esta aplicación a grupos de usuarios cuyos dispositivos no se han inscrito en Intune. Se debe asignar a los usuarios una licencia de Intune; consulte [Licencias que incluyen Intune](../fundamentals/licenses.md).
    - **Requerido**: la aplicación se instala en los dispositivos de los grupos seleccionados. Algunas plataformas pueden tener mensajes adicionales para el usuario final para confirmar antes de que comience la instalación de la aplicación.
-   - **Desinstalar**: La aplicación se desinstala de los dispositivos de los grupos seleccionados si Intune ha instalado la aplicación anteriormente en el dispositivo a través de una asignación "Disponible para dispositivos inscritos" o "Requerido" utilizando la misma implementación. Los vínculos web no se puede quitar después de la implementación.
+   - **Desinstalar**: La aplicación se desinstala de los dispositivos de los grupos seleccionados si Intune ha instalado la aplicación anteriormente en el dispositivo a través de una asignación "Disponible para dispositivos inscritos" o "Requerido" utilizando la misma implementación. 
 
      > [!NOTE]
      > **Solo para aplicaciones iOS/iPadOS**:

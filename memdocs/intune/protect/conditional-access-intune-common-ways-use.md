@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6d062af4859dcca6c762bf401e1007a9fc9af126
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992949"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002671"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>¿Cuáles son las formas habituales de usar el acceso condicional con Intune?
 
@@ -113,7 +113,7 @@ Cuando los dispositivos no cumplen las condiciones establecidas, se guía al usu
 > [!NOTE]
 > A partir de julio de 2020, el soporte técnico para Exchange Connector queda en desuso y se reemplaza por la [autenticación moderna híbrida (HMA)](/office365/enterprise/hybrid-modern-auth-overview) de Exchange. El uso de HMA no requiere que Intune configure y use Exchange Connector. Con este cambio, la interfaz de usuario para configurar y administrar Exchange Connector para Intune se ha quitado del centro de administración de Microsoft Endpoint Manager, salvo que ya use Exchange Connector con su suscripción.
 >
-> Si tiene una instancia de Exchange Connector configurada en su entorno, su inquilino de Intune sigue siendo compatible con su uso, y seguirá teniendo acceso a la interfaz de usuario que admite su configuración. Consulte el artículo sobre [instalación de Exchange On-Premises Connector](../protect/exchange-connector-install.md) para obtener más información. Puede seguir usando el conector o configurar HMA y después desinstalar el conector.
+> Si tiene una instancia de Exchange Connector configurada en el entorno, el inquilino de Intune sigue siendo compatible con su uso, y seguirá teniendo acceso a la interfaz de usuario que admite su configuración. Consulte el artículo sobre [instalación de Exchange On-Premises Connector](../protect/exchange-connector-install.md) para obtener más información. Puede seguir usando el conector o configurar HMA y después desinstalar el conector.
 >
 > La autenticación moderna híbrida ofrece funcionalidad que anteriormente proporcionaba Exchange Connector para Intune: asignación de una identidad de dispositivo a su registro de Exchange.  Esta asignación se produce ahora fuera de una configuración que se realiza en Intune o en el requisito del conector de Intune para establecer un puente entre Intune y Exchange. Con HMA, se ha quitado el requisito de usar la configuración específica de "Intune" (el conector).
 
