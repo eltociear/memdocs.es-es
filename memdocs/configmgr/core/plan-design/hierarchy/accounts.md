@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698493"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039353"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Cuentas que se usan en Configuration Manager
 
@@ -336,7 +336,7 @@ Puede especificar más de una cuenta de instalación de inserción de cliente. C
 > 4. Después, quite la cuenta antigua de Configuration Manager y Active Directory Domain Services.  
 
 > [!IMPORTANT]  
-> No conceda a esta cuenta el derecho para iniciar sesión de forma local.  
+> Use la directiva de grupo local o de dominio para asignar el derecho de usuario de Windows para **Denegar el inicio de sesión local**. Como miembro del grupo de administradores, esta cuenta tendrá el derecho para iniciar sesión localmente, algo que no es necesario. Para mejorar la seguridad, deniegue explícitamente el derecho para esta cuenta. El derecho de denegación sustituye al derecho de permitir.<!--MEMDocs#744-->
 
 Para obtener más información, vea [Instalación de inserción de cliente](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 

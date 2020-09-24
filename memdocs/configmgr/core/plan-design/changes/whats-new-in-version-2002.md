@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 4035a6684fc346205f7c7af109bf4c0389576e77
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607704"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083971"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novedades de la versión 2002 de la rama actual de Configuration Manager
 
@@ -443,7 +443,7 @@ Se ofrecen estas revisiones adicionales para solucionar problemas específicos:
 | [4575339](https://support.microsoft.com/help/4575339) | Los dispositivos aparecen dos veces en el centro de administración de Microsoft Endpoint Configuration Manager. | 23 de julio de 2020 | No |
 | [4575774](https://support.microsoft.com/help/4575774) | Error del cmdlet New-CMTSStepPrestartCheck en la versión 2002 de Configuration Manager. | 24 de julio de 2020 | No |
 | [4576782](https://support.microsoft.com/help/4576782) | Se agota el tiempo de espera de la hoja de la aplicación en el Centro de administración de Microsoft Endpoint Manager | 11 de agosto de 2020 | No |
-
+| [4578123](https://support.microsoft.com/help/4578123) | Las consultas de CMPivot devuelven resultados inesperados en Configuration Manager, versión 2002 | 24 de agosto de 2020 | No |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

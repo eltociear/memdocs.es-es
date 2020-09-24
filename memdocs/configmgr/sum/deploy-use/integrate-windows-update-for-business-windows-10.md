@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699813"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083903"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integración con Windows Update para empresas
 
@@ -90,9 +90,9 @@ Para obtener más información sobre el programa Windows Insider, consulte [Intr
     - **Nivel de preparación de la rama**: Establezca la rama para la que el dispositivo recibirá actualizaciones de Windows. Elija el canal semianual (dirigido), el canal semianual o una compilación de Windows Insider.
 
         > [!NOTE]
-        > Implemente directivas para el **canal semianual (dirigido)** en Windows 10, *versión 1903 o posterior*. Implemente directivas para el **canal semianual** en Windows 10, *versión 1809 o anterior*.
+        > Implemente directivas para el **canal semianual** en Windows 10, *versión 1903 o posterior*. Implemente directivas para el **canal semianual (dirigido)** en Windows 10, *versión 1809 o anterior*.
         >
-        > Si implementa una directiva para **canal semianual** en Windows 10, versión 1903 o posterior, se produce un error **0x8004100c** en la implementación.<!-- 5593139 -->
+        > Si implementa una directiva para **canal semianual (dirigido)** en Windows 10, versión 1903 o posterior, se produce un error **0x8004100c** en la implementación.<!-- 5593139 -->
 
     - **Período de aplazamiento (días)** :  especifique el número de días durante los que se aplazarán las actualizaciones de características. Puede aplazar la recepción de estas actualizaciones de características hasta 365 días a partir de su lanzamiento.
     - **Pausar el inicio de las actualizaciones de características:** : seleccione si desea pausar la recepción de actualizaciones de características para los dispositivos durante un máximo de 35 días a partir del momento en que pausa las actualizaciones. Una vez que transcurra el máximo de días, la funcionalidad de pausa expirará automáticamente y el dispositivo buscará actualizaciones aplicables en Windows Update. Después de este análisis, puede pausar las actualizaciones de nuevo. Puede quitar la pausa de las actualizaciones de características desactivando la casilla.

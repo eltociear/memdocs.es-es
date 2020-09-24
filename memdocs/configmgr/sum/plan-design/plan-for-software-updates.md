@@ -5,17 +5,17 @@ description: Es imprescindible planear la infraestructura de punto de actualizac
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696725"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718831"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Planear actualizaciones de software en Configuration Manager
 
@@ -260,10 +260,10 @@ Cuando un servidor WSUS se configura como un punto de actualización de software
 Cuando se agrega el rol de punto de actualización de software en un servidor de sitio primario, no se puede utilizar un servidor WSUS que esté configurado como una réplica. Cuando el servidor WSUS está configurado como una réplica, Configuration Manager no puede configurar el servidor WSUS, y la sincronización de WSUS tampoco se puede llevar a cabo. El primer punto de actualización de software que se instala en un sitio primario es el punto de actualización de software predeterminado. Los puntos de actualización de software adicionales del sitio se configuran como réplicas del punto de actualización de software predeterminado.  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> Decidir si se va a configurar WSUS para usar SSL  
-Use el protocolo SSL para proteger el punto de actualización de software. WSUS utiliza SSL para autenticar en el servidor WSUS los equipos cliente y los servidores WSUS que siguen en la cadena. WSUS también utiliza SSL para cifrar los metadatos de las actualizaciones de software. Si decide proteger WSUS con SSL, prepare el servidor WSUS antes de instalar el punto de actualización de software. Para obtener más información, vea el artículo [Configure SSL on the WSUS server (Configurar SSL en el servidor WSUS)](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) en la documentación de WSUS. 
 
-Cuando instala y configura el punto de actualización de software, debe seleccionar la opción para **Habilitar las comunicaciones SSL para el servidor WSUS**. De lo contrario, Configuration Manager configura WSUS para que no use SSL. Cuando habilite SSL en un punto de actualización de software, configure también los puntos de actualización de software en sitios secundarios para que usen SSL.  
+Se recomienda encarecidamente utilizar el protocolo SSL para proteger el punto de actualización de software. WSUS utiliza SSL para autenticar en el servidor WSUS los equipos cliente y los servidores WSUS que siguen en la cadena. WSUS también utiliza SSL para cifrar los metadatos de las actualizaciones de software. Si decide proteger WSUS con SSL, prepare el servidor WSUS antes de instalar el punto de actualización de software.
 
+Cuando instala y configura el punto de actualización de software, debe seleccionar la opción para **Habilitar las comunicaciones SSL para el servidor WSUS**. De lo contrario, Configuration Manager configura WSUS para que no use SSL. Cuando habilite SSL en un punto de actualización de software, configure también los puntos de actualización de software en sitios secundarios para que usen SSL. Para obtener más información, consulte el tutorial [Configuración de un punto de actualización de software para usar TLS/SSL con un certificado PKI](../get-started/software-update-point-ssl.md).
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Configurar firewalls  
 

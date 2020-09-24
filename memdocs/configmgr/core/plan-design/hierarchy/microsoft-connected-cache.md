@@ -2,7 +2,7 @@
 title: Caché conectada de Microsoft
 titleSuffix: Configuration Manager
 description: Uso del punto de distribución de Configuration Manager como servidor de caché local para la Optimización de distribución
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699337"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039302"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Caché de conexión de Microsoft en Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699337"
 
 <!--3555764-->
 
-a partir de la versión 1906, puede instalar un servidor de caché con conexión de Microsoft en los puntos de distribución. Al almacenar en caché este contenido de forma local, los clientes pueden beneficiarse de la característica de Optimización de entrega y, además, puede ayudar a proteger los vínculos WAN.
+a partir de la versión 1906, puede instalar un servidor de caché con conexión de Microsoft en los puntos de distribución. Al almacenar en caché este contenido de forma local, los clientes pueden beneficiarse de la característica de Optimización de distribución que puede ayudar a proteger los vínculos WAN.
 
 > [!NOTE]
 > A partir de la versión 1910, esta característica se llama **caché con conexión de Microsoft**. Antes se conocía como “caché en la red de Optimización de distribución”.

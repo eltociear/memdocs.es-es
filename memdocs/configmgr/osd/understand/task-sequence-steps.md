@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606978"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574803"
 ---
 # <a name="task-sequence-steps"></a>Pasos de la secuencia de tareas
 
@@ -1096,8 +1096,9 @@ Si el disco duro ya está cifrado pero BitLocker está deshabilitado, el paso **
 
 Utilice las siguientes variables de secuencia de tareas con este paso:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>Cmdlets correspondientes a Habilitar BitLocker
 
@@ -1592,12 +1593,20 @@ Use este paso para quitar o configurar al cliente de Configuration Manager en el
 
 Este paso quita por completo el cliente de Configuration Manager en lugar de quitar solo la información de clave. Cuando la secuencia de tareas implementa la imagen de sistema operativo capturada, instala un cliente nuevo de Configuration Manager cada vez.  
 
-> [!Note]  
-> El motor de secuencia de tareas solo quita el cliente durante la secuencia de tareas **Generar y capturar una imagen de sistema operativo de referencia**. El motor de secuencia de tareas no quita al cliente durante otros métodos de captura, como medios de captura o una secuencia de tareas personalizada.  
+> [!TIP]
+> De forma predeterminada, el motor de secuencia de tareas solo quita el cliente durante la secuencia de tareas **Generar y capturar una imagen de sistema operativo de referencia**. El motor de secuencia de tareas no quita al cliente durante otros métodos de captura, como medios de captura o una secuencia de tareas personalizada. Puede reemplazar este comportamiento para una secuencia de tareas de implementación del sistema operativo. Establezca la variable de secuencia de tareas **SMSTSUninstallCCMClient** en **TRUE** antes del paso **Preparar el cliente de Configuration Manager para la captura**. Esta variable y el comportamiento solo se aplican a las secuencias de tareas de implementación del sistema operativo. Quita el cliente después del siguiente reinicio del dispositivo.
 
 Este paso de secuencia de tareas solo se ejecuta en el sistema operativo completo. No se ejecuta en Windows PE.  
 
 Para agregar este paso en el editor de secuencia de tareas, seleccione **Agregar**, **Imágenes** y **Preparar el cliente de Configuration Manager para la captura**.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>Variables para preparar el cliente de Configuration Manager para la captura
+
+Utilice las siguientes variables de secuencia de tareas con este paso:  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>Cmdlets correspondientes a Preparar el cliente de Configuration Manager para Capture
 

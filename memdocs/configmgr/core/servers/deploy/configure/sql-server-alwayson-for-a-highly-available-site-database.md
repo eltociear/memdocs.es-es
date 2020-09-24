@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607549"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689419"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparación para usar grupos de disponibilidad AlwaysOn de SQL Server con Configuration Manager
 
@@ -390,6 +390,9 @@ Configure el modelo de recuperación de la base de datos de sitio en **Completo*
 Utilice la opción de recuperación del sitio **Omitir recuperación de base de datos (use esta opción si la base de datos de sitio no se vio afectada)** si al menos un nodo del grupo de disponibilidad sigue funcionando.
 
 A partir de la versión 1906, la recuperación del sitio puede volver a crear la base de datos en un grupo AlwaysOn de SQL. Este proceso funciona tanto con la inicialización manual como con la automática.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Al ejecutar el Asistente para instalación y recuperación, la página **Nueva disponibilidad de base de datos de grupo** solo se aplica a las configuraciones de propagación manual. Con la propagación automática, no hay ninguna copia de seguridad de base de datos compartida, por lo que no se muestra la página del asistente.<!-- SCCMDocs #2242 -->
 
 En la versión 1902 o en versiones anteriores, cuando se pierden todos los nodos de un grupo de disponibilidad, debe volver a crear el grupo de disponibilidad para recuperar el sitio. Configuration Manager no puede volver a generar o restaurar el nodo de disponibilidad. Vuelva a crear el grupo, restaure la copia de seguridad y vuelva a configurar SQL. Luego, use la opción de recuperación del sitio **Omitir recuperación de base de datos (use esta opción si la base de datos del sitio no se vio afectada)** .
 

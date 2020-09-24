@@ -5,17 +5,17 @@ description: Los sitios primarios requieren un punto de actualización de softwa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696933"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718848"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Instalar y configurar un punto de actualización de software  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81696933"
 ### <a name="configure-ssl-communications-to-wsus"></a>Configuración de las comunicaciones SSL con WSUS  
  Puede configurar las comunicaciones SSL en la página **General** del asistente o en la pestaña **General** en Propiedades de componente de punto de actualización de software.  
 
- Para obtener más información sobre el uso de SSL, consulte [Decidir si configurar WSUS para usar SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ Para obtener más información sobre cómo usar SSL, vea [Decidir si se va a configurar WSUS para utilizar SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) y [Configuración de un punto de actualización de software para usar TLS/SSL con un certificado PKI](../get-started/software-update-point-ssl.md).  
 
 ### <a name="wsus-server-connection-account"></a>Cuenta de conexión del servidor WSUS  
  Puede configurar una cuenta para que la utilice el servidor de sitio cuando se conecte a WSUS que se ejecuta en el punto de actualización de software. Cuando no se configura esta cuenta, Configuration Manager usa la cuenta de equipo del servidor de sitio para conectarse a WSUS. Configure la cuenta de conexión del servidor WSUS en la página **Configuración de cuenta y proxy** del asistente o en la pestaña **Configuración de cuenta y proxy** en Propiedades de punto de actualización de software.  Puede configurar la cuenta en distintas partes del asistente en función de la versión de Configuration Manager que usa.  

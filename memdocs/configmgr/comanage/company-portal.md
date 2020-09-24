@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: d44116ee022f2f01fb8b84244fb903fa6d440345
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432564"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076165"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente
 
@@ -121,7 +121,12 @@ Para ayudar a solucionar problemas relacionados con la instalación de aplicacio
 
 ### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Uso la versión 2002 de Configuration Manager, ¿por qué el Portal de empresa nuevo muestra las aplicaciones de Configuration Manager?
 
-El Portal de empresa, versión 11.0.8980.0 o posterior, muestra las aplicaciones implementadas por Configuration Manager para todos los clientes administrados conjuntamente que la usan. El requisito previo es la versión 2006 de Configuration Manager, porque agrega la configuración de cliente para controlar las notificaciones. Si instala el Portal de empresa en un dispositivo administrado conjuntamente de una versión anterior o no ajusta la configuración de cliente, los usuarios verán las notificaciones de ambos portales. Esta experiencia puede resultar confusa para los usuarios.
+El Portal de empresa, versión 11.0.8980.0 o posterior, muestra las aplicaciones implementadas por Configuration Manager para todos los clientes administrados conjuntamente que la usan. El requisito previo es la versión 2006 de Configuration Manager, porque agrega la configuración de cliente para controlar las notificaciones. Si instala el Portal de empresa en un dispositivo administrado conjuntamente de una versión anterior o no ajusta la configuración de cliente, el comportamiento puede resultar confuso para los usuarios. Las notificaciones de Configuration Manager inician el Centro de software, mientras que las notificaciones de Intune inician el Portal de empresa.
+
+Microsoft recomienda:
+
+- Usar la versión 11.0.8980.0 u otra posterior del Portal de empresa en los clientes administrados conjuntamente que ejecuten Configuration Manager, versión 2006 o posterior.
+- Establecer la configuración del cliente **Selección del portal de usuarios** en **Portal de empresa**.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>¿El Portal de empresa admite las aplicaciones implementadas como actualizaciones de software de Configuration Manager?
 

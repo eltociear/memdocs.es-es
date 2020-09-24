@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697354"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689470"
 ---
 # <a name="task-sequence-variables"></a>Variables de la secuencia de tareas
 
@@ -579,6 +579,12 @@ Si hay varios controladores de dispositivo en el catálogo de controladores que 
 (entrada)
 
 Una lista delimitada por comas de los identificadores únicos de las categorías del catálogo de controladores. El paso **Aplicar controladores automáticamente** solo tiene en cuenta los controladores de al menos una de las categorías especificadas. Este valor es opcional y no está establecido de forma predeterminada. Obtenga los identificadores de categoría disponibles mediante la enumeración de la lista de objetos **SMS_CategoryInstance** en el sitio.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Se aplica al paso [Habilitar BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker).*
+
+Especifique el PIN para el cifrado de BitLocker. Esta variable solo es válida si el modo de BitLocker es **TPM y PIN**.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1645,7 +1651,9 @@ Utilice esta variable para conservar temporalmente contenido en la memoria cach�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Por ejemplo, especifique `shutdown.exe /r /t 30 /f` para reiniciar el equipo 30 segundos después de que se complete la secuencia de tareas.
+Especifica un comando que se ejecuta una vez completada la secuencia de tareas. Justo antes de salir de la secuencia de tareas, el proceso TSManager genera la acción de publicación especificada. No espera ni registra ningún estado, simplemente sale después de llamar a ese comando.<!-- MEMDocs #719 -->
+
+Por ejemplo, especifique `shutdown.exe /r /t 30 /f` para reiniciar el equipo 30 segundos después de que se complete la secuencia de tareas.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

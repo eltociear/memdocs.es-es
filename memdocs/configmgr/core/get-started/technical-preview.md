@@ -2,7 +2,7 @@
 title: Versiones de Technical Preview
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la rama de Technical Preview para probar nuevas funcionalidades y funcionalidades de Configuration Manager.
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564217"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081746"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview para Configuration Manager
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 Las características siguientes están disponibles con la versión de Technical Preview de Configuration Manager más reciente:
 
-### <a name="technical-preview-version-2008"></a>Versión preliminar técnica 2008
+### <a name="technical-preview-version-2009"></a>Versión preliminar técnica 2009
 
-- [Versión preliminar de consultas de la recopilación](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Análisis de errores de SetupDiag en actualizaciones de características](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Supervisión del estado del escenario](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Vista de evaluación de la recopilación](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [Consulta del tamaño de la secuencia de tareas en la consola](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Tarea para eliminar archivos de diagnóstico recopilados antiguos](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Importación de objetos en la carpeta actual](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Cloud Management Gateway con conjunto de escalado de máquinas virtuales](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Mejoras en el control remoto](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Implementación de un sistema operativo a través de CMG mediante medios de arranque](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [Visualización de las relaciones entre las colecciones](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Reactivar la máquina en la fecha límite de la implementación mediante la reactivación del mismo nivel](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Mejoras en las notificaciones en la consola](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Notificaciones para dispositivos que ya no reciben actualizaciones](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Experiencia de reinicio de Windows Server mejorada para las cuentas que no son de administrador](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Mejoras de la implementación del sistema operativo](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Las características que estaban disponibles en una versión anterior de Technical Preview siguen estando disponibles en versiones posteriores. Del mismo modo, las características que se agregan a la rama actual de Configuration Manager siguen estando disponibles en la rama de Technical Preview.
@@ -145,6 +147,16 @@ Las características siguientes se publicaron con versiones anteriores de la ram
 
 > [!TIP]
 > Cuando esté disponible una nueva versión de la rama actual, se mostrarán las características que disponibles en esa versión en el último artículo sobre las *novedades*. Para obtener más información, vea [Novedades en las versiones incrementales](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2008"></a>Versión preliminar técnica 2008
+
+- [Versión preliminar de consultas de la recopilación](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Análisis de errores de SetupDiag en actualizaciones de características](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Supervisión del estado del escenario](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Vista de evaluación de la recopilación](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Consulta del tamaño de la secuencia de tareas en la consola](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Tarea para eliminar archivos de diagnóstico recopilados antiguos](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Importación de objetos en la carpeta actual](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Versión 2007, Technical Preview
 

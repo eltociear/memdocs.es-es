@@ -2,7 +2,7 @@
 title: Supervisar clientes
 titleSuffix: Configuration Manager
 description: Obtenga información detallada acerca de cómo supervisar clientes en Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525920"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574630"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Supervisión de clientes en Configuration Manager
 
@@ -76,11 +76,11 @@ Configuration Manager proporciona los siguientes tipos de información como esta
 <!--3599209-->
 Se implementan actualizaciones de software y se usan otras aplicaciones para proteger el entorno, pero estas implementaciones solo llegan a clientes correctos. Los clientes incorrectos de Configuration Manager afectan negativamente al cumplimiento general. ¿Considera que determinar el estado del cliente puede resultar complicado según el denominador "número total de dispositivos que deben estar en el ámbito de administración"? Por ejemplo, si detecta todos los sistemas de Active Directory, incluso si algunos de esos registros son para máquinas retiradas, este proceso aumenta el denominador.
 
-A partir de la versión 1902, puede ver un panel con información sobre el estado de los clientes de Configuration Manager en su entorno. Allí puede ver el estado del cliente, el estado de escenario y errores comunes. Filtre la vista por varios atributos distintos para ver los posibles problemas con las versiones del sistema operativo y de cliente.
+Configuration Manager proporciona un panel con información sobre el estado de los clientes de su entorno. Allí puede ver el estado del cliente, el estado de escenario y errores comunes. Filtre la vista por varios atributos distintos para ver los posibles problemas con las versiones del sistema operativo y de cliente.
 
 En la consola de Configuration Manager, vaya al área de trabajo **Supervisión**. Expanda **Estado del cliente** y seleccione el nodo **Panel de mantenimiento del cliente**.
 
-![Captura de pantalla del panel de mantenimiento del cliente](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Captura de pantalla del panel de mantenimiento del cliente" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > No hay cambios en ccmeval.  
@@ -91,18 +91,18 @@ De forma predeterminada, el panel de mantenimiento del cliente muestra los clien
 
 En la parte superior del panel, hay un conjunto de filtros para ajustar los datos mostrados en el panel.
 
-- **Colección**: de forma predeterminada, el panel muestra los dispositivos de la colección **Todos los sistemas**. Seleccione una recopilación de dispositivos en la lista para definir el ámbito de la vista a un subconjunto de dispositivos de una colección específica.  
+- **El estado de los clientes en las colecciones siguientes**: de forma predeterminada, el panel muestra los dispositivos de la colección **Todos los sistemas**. Seleccione una recopilación de dispositivos para definir el ámbito de la vista a un subconjunto de dispositivos de una colección específica.  
 
-- **Con conexión/sin conexión**: de forma predeterminada, el panel muestra solo los clientes en línea. Este estado procede del canal de notificación de cliente que actualiza el estado de un cliente cada cinco minutos. Para más información, vea [Acerca del estado de cliente](monitor-clients.md#bkmk_about).  
+- **Cliente activo durante los últimos días**: de manera predeterminada, el panel muestra los clientes que están activos en los últimos tres días.  
 
-- **Activo \# días**: de manera predeterminada, el panel muestra los clientes que están activos en los últimos tres días.  
+- **Incluir el estado de los clientes sin conexión**: de forma predeterminada, el panel muestra solo los clientes en línea. Este estado procede del canal de notificación de cliente que actualiza el estado de un cliente cada cinco minutos. Para más información, vea [Acerca del estado de cliente](monitor-clients.md#bkmk_about).  
 
-- **Solo error**: define el ámbito de la vista únicamente a los dispositivos que notifican un error de estado de cliente.  
+- **Mostrar solo los detalles del cliente incorrecto**: define el ámbito de la vista únicamente a los dispositivos que notifican un error de estado de cliente.  
 
     > [!Tip]  
     > Puede usar este filtro junto con los iconos de versión de cliente y versión de sistema operativo. Para más información, vea [Iconos de versión](#version-tiles).
 
-### <a name="client-health-percentage"></a>Porcentaje de estado de cliente
+### <a name="overall-client-health"></a>Estado general del cliente
 
 Este icono muestra el estado general del cliente en la jerarquía.
 

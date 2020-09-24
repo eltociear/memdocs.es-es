@@ -2,7 +2,7 @@
 title: Configuración de los portales de BitLocker
 titleSuffix: Configuration Manager
 description: Instalación de los componentes de administración de BitLocker para el portal de autoservicio y el sitio web de administración y supervisión
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574599"
 ---
 # <a name="set-up-bitlocker-portals"></a>Configuración de los portales de BitLocker
 
@@ -106,6 +106,8 @@ Este proceso usa un script de PowerShell, MBAMWebSiteInstaller.ps1, para instala
 - `-IISWebSite`: el sitio web donde el script instala las aplicaciones web de MBAM. De manera predeterminada, usa el sitio web predeterminado de IIS. Cree el sitio web personalizado antes de usar este parámetro.
 
 - `-InstallDirectory`: La ruta de acceso donde el script instala los archivos de aplicación web. De forma predeterminada, esta ruta de acceso es `C:\inetpub`. Cree el directorio personalizado antes de usar este parámetro.
+
+- `-DomainName` *se aplica a la versión 2002 y posteriores*: especifique el nombre de dominio NetBIOS del servidor con el rol de departamento de soporte técnico o de portal web de autoservicio. Solo es necesario si el nombre de dominio NetBIOS no coincide con el nombre de dominio DNS. Esta configuración también se conoce como un espacio de nombres de dominio separado. Por ejemplo, `-DomainName fabrikham` donde el nombre de dominio DNS es `contoso.com`.<!-- MEMDocs #759 -->
 
 - `-Uninstall`: desinstala los sitios del portal web del departamento de ayuda de administración de BitLocker/autoservicio en un servidor web en el que se han instalado previamente.
 

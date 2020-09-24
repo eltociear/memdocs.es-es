@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606930"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574685"
 ---
 # <a name="deploy-bitlocker-management"></a>Implementación de la administración de BitLocker
 
@@ -214,7 +214,8 @@ Para evitar este comportamiento, deshabilite primero BitLocker en el dispositivo
 
 El controlador del cliente de Configuration Manager para BitLocker es compatible con la administración conjunta. Si el dispositivo está administrado conjuntamente y cambia la [carga de trabajo de Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, el cliente de Configuration Manager omite su directiva de BitLocker. El dispositivo obtiene la directiva de cifrado de Windows de Intune.
 
-Al cambiar las autoridades de administración del cifrado, y si el algoritmo de cifrado deseado también cambia, tendrá que planear un [nuevo cifrado](#re-encryption).
+> [!NOTE]
+> Cambiar las autoridades de administración de cifrado mientras se mantiene el algoritmo de cifrado deseado no requiere ninguna acción adicional en el cliente. Sin embargo, al cambiar las autoridades de administración del cifrado, y si el algoritmo de cifrado deseado también cambia, tendrá que planear un [nuevo cifrado](#re-encryption).
 
 Para obtener más información sobre la administración de BitLocker con Intune, consulte los siguientes artículos:
 

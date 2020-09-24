@@ -115,6 +115,14 @@
               href: encrypt-devices-filevault.md
             - name: Supervisión del cifrado de discos
               href: encryption-monitor.md
+    - name: "Microsoft\_Tunnel"
+      items:
+        - name: "Información general sobre Microsoft\_Tunnel"
+          href: microsoft-tunnel-overview.md
+        - name: "Configuración de Microsoft\_Tunnel"
+          href: microsoft-tunnel-configure.md
+        - name: "Supervisión de Microsoft\_Tunnel"
+          href: microsoft-tunnel-monitor.md
     - name: Protección de identidad
       items:
         - name: Windows Hello
@@ -338,6 +346,8 @@
           href: security-baseline-settings-defender-atp.md
         - name: "Configuración de línea base de Microsoft\_Edge"
           href: security-baseline-settings-edge.md
+    - name: "Herramientas de línea de comandos de Microsoft\_Tunnel"
+      href: microsoft-tunnel-reference.md
     - name: Configuración de Windows Update
       href: windows-update-settings.md
     - name: Códigos de error y descripciones

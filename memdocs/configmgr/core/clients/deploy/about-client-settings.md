@@ -2,7 +2,7 @@
 title: Configuración de cliente
 titleSuffix: Configuration Manager
 description: Obtenga información sobre la configuración predeterminada y personalizada para controlar los comportamientos del cliente.
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693427"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076097"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Información sobre la configuración de cliente en Configuration Manager
 
@@ -644,11 +644,9 @@ Establezca esta opción en **Sí** para usar autenticación de nivel de red (NLA
 ### <a name="select-the-user-portal"></a>Selección del portal de usuarios
 
 <!--CMADO-3601237,INADO-4297660-->
-A partir de la versión 2006, si implementa el Portal de empresa en dispositivos administrados conjuntamente, configure esta opción para **Portal de empresa**. Esta configuración garantiza que los usuarios solo reciban notificaciones del Portal de empresa.
+A partir de la versión 2006, si implementa el Portal de empresa en dispositivos administrados conjuntamente, configure esta opción para **Portal de empresa**. Esta configuración garantiza que las notificaciones de Configuration Manager e Intune inicien el Portal de empresa. Si una notificación de Configuration Manager es para un escenario no compatible con el Portal de empresa, la selección de la notificación inicia el Centro de software.
 
-Si instala el Portal de empresa en un dispositivo administrado conjuntamente, pero configura esta opción en **Centro de software**, los usuarios verán las notificaciones de ambos portales. Esta experiencia puede resultar confusa para los usuarios.
-
-Si cambia la configuración de cliente para Portal de empresa, cuando un usuario selecciona una notificación de Configuration Manager se inicia el Portal de empresa. Si la notificación es para un escenario no compatible con el Portal de empresa, la selección de la notificación inicia el Centro de software.
+Si instala el Portal de empresa en un dispositivo administrado conjuntamente, pero configura esta opción en **Centro de software**, las notificaciones de Configuration Manager inician el Centro de software. Las notificaciones de Intune inician el Portal de empresa. Este comportamiento puede resultar confuso para que los usuarios interactúen con portales diferentes.
 
 El comportamiento del Portal de empresa depende de la configuración de la carga de trabajo de administración conjunta. Para más información, consulte [Uso de la aplicación Portal de empresa en dispositivos administrados conjuntamente](../../../comanage/company-portal.md).
 

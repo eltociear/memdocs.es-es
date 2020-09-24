@@ -3,19 +3,19 @@ title: Seguridad y privacidad de las actualizaciones de software
 titleSuffix: Configuration Manager
 description: Siga estos procedimientos recomendados de seguridad de las actualizaciones de software y obtenga información sobre cómo administra Configuration Manager la información de privacidad.
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708733"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718729"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Seguridad y privacidad para las actualizaciones de software en Configuration Manager
 
@@ -42,7 +42,9 @@ Este tema contiene información sobre la seguridad y privacidad de las actualiza
 
 -   Habilite SSL en WSUS y siga las recomendaciones de seguridad para proteger Windows Server Update Services (WSUS).  
 
-     Identifique y siga los procedimientos recomendados de seguridad para la versión de WSUS que usa con Configuration Manager.  
+     Identifique y siga los procedimientos recomendados de seguridad para la versión de WSUS que usa con Configuration Manager. 
+
+     Para obtener más información sobre cómo habilitar SSL, consulte el tutorial [Configuración de un punto de actualización de software para usar TLS/SSL con un certificado PKI](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  Si configura el punto de actualización de software para habilitar las comunicaciones SSL para el servidor WSUS, debe configurar las raíces virtuales para SSL en el servidor WSUS.  
