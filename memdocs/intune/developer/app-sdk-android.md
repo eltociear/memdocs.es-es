@@ -39,8 +39,8 @@ El SDK para aplicaciones de Microsoft Intune para Android permite incorporar dir
 El SDK para aplicaciones de Intune consta de los siguientes archivos:
 
 * **Microsoft.Intune.MAM.SDK.aar**: los componentes del SDK, excepto los archivos JAR de la biblioteca de compatibilidad.
-* **Microsoft.Intune.MAM.SDK.Suppot.v4.jar**: interfaces necesarias para habilitar MAM en aplicaciones que aprovechan la biblioteca de compatibilidad de Android v4.
-* **Microsoft.Intune.MAM.SDK.Suppot.v7.jar**: las clases necesarias para habilitar MAM en aplicaciones que usan la biblioteca de compatibilidad de Android v7.
+* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: interfaces necesarias para habilitar MAM en aplicaciones que aprovechan la biblioteca de compatibilidad de Android v4.
+* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: las clases necesarias para habilitar MAM en aplicaciones que usan la biblioteca de compatibilidad de Android v7.
 * **Microsoft.Intune.MAM.SDK.Support.v17.jar**: las clases necesarias para habilitar MAM en aplicaciones que usan la biblioteca de compatibilidad de Android v17. 
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar**: las clases necesarias para habilitar MAM en aplicaciones que usan clases de la biblioteca de compatibilidad de Android en el paquete `android.support.text`.
 * **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: este archivo AAR contiene códigos auxiliares para las clases del sistema de Android que solo están presentes en dispositivos más recientes, pero a las que se hace referencia mediante métodos en `MAMActivity`. Los dispositivos más recientes ignorarán estas clases de código auxiliar. Este archivo .aar solo es necesario si la aplicación realiza la reflexión en clases derivadas de `MAMActivity` y en la mayoría de las aplicaciones no es necesario incluirlo. AAR contiene reglas de ProGuard para excluir todas sus clases.
